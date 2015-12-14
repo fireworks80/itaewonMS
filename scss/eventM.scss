@@ -1,0 +1,450 @@
+@charset 'UTF-8';
+
+@import 'reset';
+@import 'variable';
+@import 'extend';
+@import 'mixin';
+
+/*********************
+ 	common
+ *********************/
+
+ .screen-out {
+ 	position: absolute;
+ 	top: -9999em;
+ 	text-indent: -9999em;
+ }
+
+ .mDim {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	z-index: 10;
+	display: none;
+
+	&.on { display: block; }
+
+}
+
+ .mWrap {
+		// @include debug;
+		width: $width-m;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+	}
+
+	/**********
+	header
+***********/
+.mHeader {
+	text-align: center;
+	padding:  32px 0 34px;
+	background: #eadcc2;
+	position: relative;
+
+	.mLogo { display: inline-block; }
+
+	&-toggle {
+		// @include debug;
+		@include backgroundM('toggle','png',$x: 0);
+		display: block;
+		width: 50px;
+		height: 43px;
+		position: absolute;
+		top: 37px;
+		right: 22px;
+		text-indent: -9999em;
+
+		&.on { background-position: 0 bottom; }
+	} // toggle
+}
+
+/**********
+	nav
+***********/
+.mNav {
+	// @include debug;
+	position: absolute;
+	top: 0;
+	right: -400px; //-400
+	height: 100%;
+	background: #f6f1e6;
+	z-index: 100;
+
+	&-item {
+		@include backgroundM('nav-bottom-line','png');
+		&:first-child { background: none; }
+	} // item
+
+	&-link {
+		@include backgroundM('nav-img-ir','png',$y:50px);
+		// @include debug;
+		display: block;
+		width: 400px;
+		margin: {
+			left: auto;
+			right: auto;
+		}
+		text-indent: -99999em;
+	}
+
+	&-itaewon {
+		height: 147px;
+		padding: { top: 50px; bottom: 19px; }
+	} // itaewon
+
+	&-menu {
+		height: 149px;
+		padding: { top: 29px; bottom: 19px; }
+		background-position: center -169px;
+	} // menu
+
+	&-event {
+		height: 140px;
+		padding: { top: 38px; bottom: 19px; }
+		background-position: center -369px;
+	} // event
+
+	&-ambassador {
+		height: 136px;
+		padding-top: 41px;
+		background-position: center -568px;
+	} // ambassador
+}
+
+/**********
+	container
+***********/
+.mContainer {
+	// @include debug;
+	position: relative; text-align: center;
+}
+
+/**********
+	event date
+***********/
+.event-date {
+	@include background('event/m/event-date','png');
+	width: 529px;
+	height: 21px;
+	margin: 18px auto 0;
+	text-indent: -99999em;
+	overflow: hidden;
+}
+
+/**********
+	tab
+***********/
+.tab {
+	// @include debug;
+	position: fixed;
+	overflow: hidden;
+	left: 50%;
+	top: 134px;
+	margin-left: (565px / 2) * -1;
+	z-index: 1;
+
+	&__item { float: left; }
+
+	&__link {
+		@include background('event/m/btn-ir','png',$x: 0);
+		display: block;
+		width: 180px;
+		height: 76px;
+
+		.tab__item.on & { background-position: 0 -77px; }
+
+		&--sec {
+			margin-left: 13px;
+			background-position: -188px 0;
+
+			.tab__item.on & { background-position: -188px -77px; }
+		}
+		&--last {
+			margin-left: 12px;
+			background-position: -380px 0;
+
+			.tab__item.on & { background-position: -380px -77px; }
+		}
+	} // link
+}
+
+/**********
+	event top
+***********/
+.event-top {
+	@include background('event/m/top-bg','png');
+	padding:{
+		top: 225px;
+		bottom: 103px;
+	}
+
+	&__tit { margin-top: 20px; }
+	&__goEvent {
+		@include background('event/m/btn-ir','png',$x: -283px, $y: -383px);
+		width: 63px;
+		height: 61px;
+		display: inline-block;
+		margin-top: 48px;
+	}
+}
+
+/**********
+	event accent
+***********/
+.event-accent {
+
+	@include background('event/m/event1-bg-bottom','png',$y: bottom, $color: #eadfdd);
+
+	padding: {
+		top: 56px;
+		bottom: 79px;
+	}
+
+	&__txt { margin-top: 20px; } // txt
+
+	&__tip { margin-top: 38px; }
+}
+
+/**********
+	mEvent btn
+***********/
+.mEvent-btn {
+	@include background('event/m/btn-ir','png');
+	display: inline-block;
+	height: 81px;
+	width: 276px;
+	margin-top: 114px;
+
+	&__join-now { background-position: 0 -209px; }
+	&__gift { margin-left: 3px; background-position: -284px -209px; }
+}
+
+
+/**********
+	mInstargram
+***********/
+.mInstargram {
+	// @include debug;
+	margin: 19px auto 0;
+	width: 564px;
+	height: 561px;
+	position: relative;
+	*zoom: 1;
+
+	&:after { content: ''; display: table; clear: both; }
+
+
+
+	&__pic {
+		float: left;
+		overflow: hidden;
+		display: inline-block;
+		position: relative;
+		width: 188px;
+		height: 187px;
+
+		img { width: 100%; }
+	} // pic
+
+	&__bg {
+		@include background('event/m/instar-bg-ir','png',$x: 0);
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		@for $i from 0 through 6 {
+			&--#{$i} { background-position: ($i * -188px) 0; }
+		}
+	} // bg
+
+	// arrow
+	&__arrow {
+		// @include debug;
+		@include background('event/m/btn-ir','png');
+		display: block;
+		width: 68px;
+		height: 67px;
+		position: absolute;
+		top: 579px;
+
+		&--prev { left: 199px; background-position: -342px -312px; }
+		&--next { left: 297px; background-position: -439px -312px; }
+	}
+}
+
+/**********
+	digital playground 소문내기
+***********/
+.event-digital {
+	@include background('event/m/event2-bg-bottom','png',$y: bottom, $color: #fff);
+
+	padding: {
+		top: 53px;
+		bottom: 78px;
+	}
+
+	&__txt { margin-top: 19px; }
+
+	&__what-is {
+		@include background('event/m/event2-bg','png');
+		width: 560px - 15;
+		height: 683px - 41;
+		margin: 39px auto 0;
+		padding: {
+			top: 41px;
+			left: 15px;
+		}
+		text-align: left;
+
+		// 컨텐츠
+		&__content { margin-left: 25px; }
+
+		&__txt { margin-top: 18px; }
+		&__btn { margin-top: 13px; }
+	}
+
+	&__discription {
+		@include background('event/m/event2-whatIsPlayground-floor-disc','png');
+		width: 530px;
+		height: 364px;
+		text-indent: -9999em;
+		overflow: hidden;
+		margin-top: 40px;
+	}
+
+	// 참여 방법
+	&__join-way {
+		margin-top: 17px;
+
+		&__list {
+			@include background('event/m/event2-eventJoinWay-step','png');
+			height: 337px;
+			margin-top: 10px;
+			overflow: hidden;
+			text-indent: -9999em;
+		}
+	}
+
+	.mEvent-btn {
+		margin-top: 29px;
+
+		&__rumor { background-position: 0 -301px; }
+	}
+}
+
+/**********
+	mApplication download
+***********/
+.mApplication {
+	@include background('event/m/app-bg','png',$x: 34px, $y: 26px, $color: #c9ae82);
+
+	text-align: left;
+	padding: {
+		top: 30px;
+		bottom: 29px;
+		left: 270px;
+	}
+
+	&__txt { margin-top: 14px; }
+}
+
+/**********
+	mCaution
+***********/
+.mCaution {
+	@include background('event/m/caution-bg-top','png',$color: #2a2827);
+	padding: {
+		top: 38px;
+		bottom: 38px;
+		left: 40px;
+	}
+	text-align: left;
+
+	&__txt {
+		@include background('event/m/caution-txt','png',$x: 0);
+		margin-top: 19px;
+		height: 222px;
+		overflow: hidden;
+		text-indent: -9999em;
+	}
+}
+
+.event-pop .close, .comingSoon-btn, .takePic__btn, .userInfo__btn { display: inline-block; border: none; cursor: pointer; }
+.event-pop { position: absolute; left: 50%; display: none; z-index: 100; padding-top: 43px; background: #fff; }
+.event-pop.on { display: block; }
+.event-pop .close { position: absolute; background: transparent url("/Images/itaewon/event/popup/mClose.png") no-repeat center top; width: 50px; height: 50px; top: 19px; right: 20px; }
+
+
+/**********
+	경품
+***********/
+.mGift {
+	width: 640px;
+	margin-left: (640px / 2) * -1;
+	top: 0;
+	padding-bottom: 43px;
+
+	%mGiftInner {
+		height: 355px - 12;
+		width: 562px;
+		padding-top: 12px;
+		margin: {
+			left: auto;
+			right: auto;
+			bottom: 0;
+		}
+	}
+
+	%mGiftImg {
+		text-indent: -9999em;
+		overflow: hidden;
+		height: 217px;
+		margin: 12px auto 0;
+	}
+
+	// top
+	&__top {
+		@extend %mGiftInner;
+		@include background('event/popup/mGift-innerBg-top','png');
+		margin-top: 28px;
+	}
+
+	// bottom
+	&__bottom {
+		@extend %mGiftInner;
+		@include background('event/popup/mGift-innerBg-bottom','png');
+		margin-top: 9px;
+	}
+
+	&__img {
+		&--top {
+			@extend %mGiftImg;
+			@include background('event/popup/mGift-top','png');
+			width: 520px;
+		}
+		&--bottom {
+			@extend %mGiftImg;
+			@include background('event/popup/mGift-bottom','png');
+			width: 513px;
+		}
+	}
+
+	&__caution {
+		@include background('event/popup/mGift-caution','png');
+		width: 514px;
+		height: 132px;
+		margin: 18px auto 0;
+		text-indent: -9999em;
+		overflow: hidden;
+	}
+}

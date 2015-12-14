@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=640">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/menuM.css">
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="./js/jquery.bxslider.js"></script>
+</head>
+<body>
+	<!--시작: .wrap -->
+	<div class="mWrap">
+
+		<!--시작: .header -->
+		<div class="mHeader" id="mHeader">
+			<h1><a href="#" class="mLogo"><img src="./images/m/logo.png" alt="nescafe itaewon"></a></h1>
+			<a class="mHeader-toggle" href="#">네비게이션</a>
+		</div>
+		<!-- // 끝: .header -->
+
+		<!--시작: .container -->
+		<div class="mContainer">
+
+			<!--시작: .mNav -->
+			<ul class="mNav">
+				<li class="mNav-item mNav-item__itaewon"><a class="mNav-link mNav-itaewon" href="#">nescafe itaewon</a></li>
+				<li class="mNav-item mNav-item__menu"><a class="mNav-link mNav-menu" href="#">menu</a></li>
+				<li class="mNav-item mNav-item__event"><a class="mNav-link mNav-event" href="#">event</a></li>
+				<li class="mNav-item mNav-item__ambassador"><a class="mNav-link mNav-ambassador" href="#">ambassador</a></li>
+			</ul>
+			<!-- // 끝: .mNav -->
+			<!--시작: .menu-wrap -->
+			<div class="menu-wrap">
+				<h2 class="menu-tit"><img src="./images/menu/m/tit.png" alt="nescafe itaewon menu"></h2>
+
+				<!--시작: .menu-list -->
+				<ul class="menu-list">
+					<li class="menu-list__item"><a href="#none"><img src="./images/menu/m/btn-nescafe.png" alt="nescafe"></a></li>
+					<li class="menu-list__item"><a href="#none"><img src="./images/menu/m/btn-dolce.png" alt="nescafe dolce gusto"></a></li>
+					<li class="menu-list__item"><a href="#none"><img src="./images/menu/m/btn-tea.png" alt="tea"></a></li>
+					<li class="menu-list__item"><a href="#none"><img src="./images/menu/m/btn-beverage.png" alt="beverage"></a></li>
+					<li class="menu-list__item"><a href="#none"><img src="./images/menu/m/btn-sandwich.png" alt="sandwiches/salad"></a></li>
+					<li class="menu-list__item"><a href="#none"><img src="./images/menu/m/btn-cake.png" alt="cake"></a></li>
+					<li class="menu-list__item"><a href="#none"><img src="./images/menu/m/btn-kitkat.png" alt="kitkat signature"></a></li>
+				</ul>
+				<!-- // 끝: .menu-list -->
+
+				<!--시작: .menu-contents -->
+				<div class="menu-contents">
+					<a class="menu-contents__link" href="#"><img src="./images/menu/m/btn-con1.png" alt="nescafe 메뉴로 가기"></a>
+					<a class="menu-contents__link" href="#"><img src="./images/menu/m/btn-con2.png" alt="돌체구스토 메뉴로 가기"></a>
+					<a class="menu-contents__link" href="#"><img src="./images/menu/m/btn-con3.png" alt="킷캣 메뉴로 가기"></a>
+				</div>
+				<!-- // 끝: .menu-contents -->
+			</div>
+			<!-- // 끝: .menu-wrap -->
+
+
+
+			<!--시작: .dim -->
+			<div class="mDim"></div>
+			<!-- // 끝: .dim -->
+
+			<!-- popup -->
+
+
+			<!-- // popup -->
+
+		</div>
+		<!-- // 끝: .container -->
+
+	</div>
+	<!-- // 끝: .wrap -->
+
+
+
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+	<script src="./js/itaewonM.js"></script>
+	<script src="./js/event.js"></script>
+	<script>
+		mobileScroll();
+		$('.js-tabItem').click(function(e){
+			e.preventDefault();
+			var hash = $(this).find('a').attr('href');
+
+			$(this).addClass('on').siblings().removeClass('on');
+			goToLoc(hash);
+
+		});
+
+		$('.js-goEvent1').click(function(e){
+			e.preventDefault();
+			var hash = this.hash;
+			goToLoc(hash);
+		});
+	</script>
+</body>
+</html>

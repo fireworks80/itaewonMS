@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+/* v2.0 | 20110126 http://meyerweb.com/eric/tools/css/reset/ License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section { display: block; }
+body { line-height: 1; }
+ol,
+ul { list-style: none; }
+blockquote,
+q { quotes: none; }
+blockquote:before,
+blockquote:after,
+q:before,
+q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+.mComingSoon-btn,
+.mComingSoon .mClose { display: inline-block; border: none; cursor: pointer; }
+
+/********************* 	common ********************/
+.screen-out { position: absolute; top: -9999em; text-indent: -9999em; }
+.mWrap { width: 640px; margin: 0 auto; overflow: hidden; position: relative; }
+
+/**********
+	header
+***********/
+.mHeader { text-align: center; padding: 32px 0 34px; background: #eadcc2; position: relative; }
+.mHeader .mLogo { display: inline-block; }
+.mHeader-toggle { display: block; position: absolute; width: 50px; height: 33px; top: 37px; right: 22px; 		/* @include backgroundM('toggle','png',$x: 0);
+					display: block;
+					width: 50px;
+					height: 43px;
+					position: absolute;
+					top: 37px;
+					right: 22px;
+					text-indent: -9999em;
+
+					&.on { background-position: 0 bottom; } */ }
+	.mHeader-toggle__line:before,
+	.mHeader-toggle__line,
+	.mHeader-toggle__line:after { content: ''; cursor: pointer; height: 3px; width: 100%; background: #000; display: block; position: absolute; border-radius: 1px; -webkit-transition: all 300ms ease-in-out; transition: all 300ms ease-in-out; }
+	.mHeader-toggle__line:before { top: -15px; }
+	.mHeader-toggle__line { top: 15px; }
+	.mHeader-toggle__line:after { bottom: -15px; }
+	.mHeader-toggle.on .mHeader-toggle__line { background: transparent; }
+	.mHeader-toggle.on .mHeader-toggle__line:before,
+	.mHeader-toggle.on .mHeader-toggle__line:after { top: 0; }
+	.mHeader-toggle.on .mHeader-toggle__line:before { -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+	.mHeader-toggle.on .mHeader-toggle__line:after { -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+	/**********
+		container
+	***********/
+	.mContainer { position: relative; text-align: center; }
+	.mContainer.lv1 .mTab,
+	.mContainer.lv1 .mFloor2,
+	.mContainer.lv1 .mFloor3,
+	.mContainer.lv1 .mFloor4 { display: none; }
+	.mContainer.lv2 .mFloor1,
+	.mContainer.lv2 .mFloor3,
+	.mContainer.lv2 .mFloor4 { display: none; }
+	.mContainer.lv3 .mFloor1,
+	.mContainer.lv3 .mFloor2,
+	.mContainer.lv3 .mFloor4 { display: none; }
+	.mContainer.lv4 .mFloor1,
+	.mContainer.lv4 .mFloor2,
+	.mContainer.lv4 .mFloor3 { display: none; }
+	.mDim { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: 0.6; filter: alpha(opacity=60); z-index: 10; display: none; }
+	.mDim.on { display: block; }
+
+	/**********
+		nav
+	***********/
+	.mNav { position: absolute; top: 0; right: -400px; height: 100%; background: #f6f1e6; z-index: 100; -webkit-transition: -webkit-transform 600ms; transition: transform 600ms; }
+	.mNav.on { -webkit-transform: translate(-400px, 0); -ms-transform: translate(-400px, 0); transform: translate(-400px, 0); }
+	.mNav-item { background: transparent url("../images/m/nav-bottom-line.png") no-repeat center top; }
+	.mNav-item:first-child { background: none; }
+	.mNav-link { background: transparent url("../images/m/nav-img-ir.png") no-repeat center 50px; display: block; width: 400px; margin-left: auto; margin-right: auto; text-indent: -99999em; }
+	.mNav-itaewon { height: 147px; padding-top: 50px; padding-bottom: 19px; }
+	.mNav-menu { height: 149px; padding-top: 29px; padding-bottom: 19px; background-position: center -169px; }
+	.mNav-event { height: 140px; padding-top: 38px; padding-bottom: 19px; background-position: center -369px; }
+	.mNav-ambassador { height: 136px; padding-top: 41px; background-position: center -568px; }
+
+	/**********
+		mSection, mFloors
+	***********/
+
+	/* .mSection, .mFloors {
+		// @include debug(blue);
+		text-align: center;
+		position: relative;
+		display: none;
+
+		&.on { display: block; }
+	} */
+
+	/**********
+		mTab
+	***********/
+	.mTab { overflow: hidden; width: 560px; position: absolute; top: 24px; left: 50%; margin-left: -280px; z-index: 10; }
+	.mTab-item { float: left; margin-left: 8px; }
+	.mTab-item:first-child { margin-left: 0; }
+	.mTab-link { background: transparent url("../images/m/tab-ir.png") no-repeat 0 top; display: block; height: 76px; width: 180px; text-indent: -9999em; }
+	.mTab-link__lv2.on { background-position: 0 bottom; }
+	.mTab-link__lv3 { background-position: center top; }
+	.mTab-link__lv3.on { background-position: center bottom; }
+	.mTab-link__lv4 { background-position: right top; }
+	.mTab-link__lv4.on { background-position: right bottom; }
+
+	/**********
+		층별 소개 버튼들
+	***********/
+	.goLoc-link { display: block; position: absolute; }
+	.goLoc-menu { top: 563px; left: 13px; }
+	.goLoc-self { top: 413px; left: 112px; }
+	.goLoc-welcoming { top: 547px; left: 230px; }
+	.goLoc-video { top: 661px; left: 314px; }
+	.goLoc-tiny { top: 660px; left: 228px; }
+	.goLoc-community { top: 426px; left: 265px; }
+	.goLoc-led { top: 479px; left: 208px; }
+
+	/**********
+		floor1
+	***********/
+	.mFloor1 { background: #8dbfc5 url("../images/m/floor1-visual.png") no-repeat center bottom; min-height: 947px; }
+	.mFloor1-link { position: absolute; top: 40px; left: 50%; margin-left: -37.5px; }
+	.mFloor1-txt { display: inline-block; margin-top: 150px; }
+	.mFloor1-tit { margin-top: 25px; }
+	.mFloor1-open-day { margin-top: 38px; }
+	.mFloor1 .dday { margin-top: 18px; }
+	.mFloor1 .video { position: absolute; top: 412px; right: 40px; }
+
+	/**********
+		roll
+	***********/
+	.mRoll { height: 100%; }
+	.mRoll-item { position: relative; min-height: 990px; }
+	.mRoll__sec1 { background: transparent url("../images/m/bg-floor2.png") no-repeat center top; min-height: 844px; padding-top: 146px; }
+	.mRoll__sec2 { background: transparent url("../images/m/bg-welcoming.png") no-repeat center top; }
+	.mRoll__sec3 { background: transparent url("../images/m/bg-menu.png") no-repeat center top; }
+	.mRoll__sec4 { background: transparent url("../images/m/bg-video.png") no-repeat center top; }
+	.mRoll__sec5 { background: transparent url("../images/m/bg-self.png") no-repeat center top; }
+	.mRoll__sec6 { background: transparent url("../images/m/bg-floor3.png") no-repeat center top; padding-top: 125px; min-height: 865px; }
+	.mRoll__sec7 { background: transparent url("../images/m/bg-tiny.png") no-repeat center top; }
+	.mRoll__sec8 { background: transparent url("../images/m/bg-community.png") no-repeat center top; }
+	.mRoll__sec9 { background: transparent url("../images/m/bg-floor4.png") no-repeat center top; padding-top: 128px; min-height: 862px; }
+	.mRoll__sec10 { background: transparent url("../images/m/bg-community.png") no-repeat center top; }
+	.mRoll .mDetail { background: transparent url("../images/m/tit-welcoming.png") no-repeat center top; width: 478px; height: 470px; position: absolute; top: 50%; left: 50%; margin-left: -239px; margin-top: -235px; }
+	.mRoll .mDetail-wrap { display: none; margin-top: -40px; }
+	.mRoll .mDetail-wrap.on { display: block; }
+	.mRoll .mDetail-tit { margin-top: 124px; }
+	.mRoll .mDetail-btn { display: inline-block; margin-top: 490px; }
+
+	/**********
+		arrow
+	***********/
+	.mArrow { position: absolute; top: 50%; width: 39px; height: 64px; display: block; margin-top: -32px; }
+	.mArrow .bx-prev,
+	.mArrow .bx-next { display: block; text-indent: -9999em; height: 100%; }
+	.mArrow .bx-prev { background: transparent url("../images/m/arrow.png") no-repeat left top; }
+	.mArrow .bx-next { background: transparent url("../images/m/arrow.png") no-repeat right top; }
+	.mArrow-prev { left: 20px; }
+	.mArrow-next { right: 20px; }
+
+	/**********
+		floor2
+	***********/
+	.mFloor-pager { position: absolute; overflow: hidden; bottom: 30px; left: 50%; }
+	.mFloor-pager li { float: left; margin-left: 11px; }
+	.mFloor-pager li:first-child { margin-left: 0; }
+	.mFloor-pager-link { display: block; text-indent: -9999em; width: 30px; height: 30px; overflow: hidden; background: transparent url("../images/m/pager.png") no-repeat left top; }
+	.mFloor-pager-link.active { background-position: right top; }
+
+	/**********
+		floor2
+	***********/
+	.mFloor2 .mFloor-pager { width: 153px; margin-left: -77px; }
+
+	/**********
+		floor3
+	***********/
+	.mFloor3 .mFloor-pager { width: 71px; margin-left: -35.5px; }
+
+	/**********
+		floor4
+	***********/
+	.mFloor4 .mFloor-pager { width: 30px; margin-left: -15px; }
+	.mFloor4 .mDetail-tit { margin-top: 97px; }
+
+	/**********
+		popup
+	***********/
+	.mComingSoon { background: transparent url("../images/m/bg-comingSoon.png") no-repeat center top; width: 483px; height: 473px; position: absolute; top: 50%; left: 50%; display: none; z-index: 10; margin-left: -241.5px; margin-top: -236.5px; }
+	.mComingSoon.on { display: block; }
+	.mComingSoon-tit { margin-top: 101px; margin-left: 145px; text-align: left; }
+	.mComingSoon-btn { background: transparent url("../images/m/btn-popOk.png") no-repeat center top; width: 187px; height: 51px; margin-top: 43px; }
+	.mComingSoon .mClose { background: transparent url("../images/m/btn-close.png") no-repeat center top; width: 46px; height: 47px; position: absolute; top: 38px; right: -16px; }
+
+	/************************ itaewon nescafe ****************************/
+	.discription { background: #000 url("../images/m/disc-bg.png") no-repeat 0 -46px; position: relative; min-height: 827px; padding: 120px 48px 0 0; text-align: right; }
+	.discription__date { margin-top: 25px; }
+	.discription__logo { margin-top: 24px; }
+	.discription__btn { position: absolute; top: 371px; left: 73px; }
+
+	/*# sourceMappingURL=itaewonM.css.map */

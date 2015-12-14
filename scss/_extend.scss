@@ -1,0 +1,14 @@
+%clearfix{
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+	*zoom: 1;
+}
+
+%btn-default{
+	display: inline-block;
+	border: none;
+	cursor: pointer;
+}

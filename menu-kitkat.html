@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/itaewon.css">
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+	<!-- gnb -->
+	<div class="gnb">
+		<div class="gnb-inner">
+			<h1 class="logo"><img src="./images/logo.png" alt="Nescafe.itaewon"></h1>
+			<!-- nav -->
+			<ul class="gnb-list">
+				<li class="gnb-item"><a href="#"><img src="./images/gnb-itaewon.png" alt=""></a></li>
+				<li class="gnb-item"><a href="#"><img src="./images/gnb-menu.png" alt=""></a></li>
+				<li class="gnb-item"><a href="#"><img src="./images/gnb-event.png" alt=""></a></li>
+				<li class="gnb-item"><a href="#"><img src="./images/gnb-ambassador.png" alt=""></a></li>
+			</ul>
+			<!-- // nav -->
+		</div>
+	</div>
+	<!-- // gnb -->
+
+	<!--시작: .wrap -->
+	<div class="wrap wrap-menu">
+
+		<!--시작: .wrap-inner -->
+		<div class="wrap-inner">
+			<h2 class="menu-tit"><img src="./images/menu/tit.png" alt="nescafe itaewon menu"></h2>
+
+			<!--시작: .menu-list -->
+			<ul class="menu-list">
+				<li class="menu-list__item"><a href="./menu-nescafe.html"><img src="./images/menu/btn-nescafe.png" alt="nescafe"></a></li>
+				<li class="menu-list__item"><a href="./menu-tea.html"><img src="./images/menu/btn-tea.png" alt="tea"></a></li>
+				<li class="menu-list__item"><a href="./menu-sandwich.html"><img src="./images/menu/btn-sandwich.png" alt="sandwitches / salad"></a></li>
+				<li class="menu-list__item"><a href="./menu-kitkat.html"><img src="./images/menu/btn-kitkat.png" alt="kitkat signature"></a></li>
+				<li class="menu-list__item menu-list__item--dolce"><a href="./menu-dolce.html"><img src="./images/menu/btn-dolce.png" alt="nescafe dolce gusto"></a></li>
+				<li class="menu-list__item"><a href="./menu-beverage.html"><img src="./images/menu/btn-beverage.png" alt="beverage"></a></li>
+				<li class="menu-list__item"><a href="./menu-cake.html"><img src="./images/menu/btn-cake.png" alt="cake"></a></li>
+			</ul>
+			<!-- // 끝: .menu-list -->
+
+			<h3 class="menu__subtit menu__subtit--kitkat"><img src="./images/menu/subTit-kitkat.png" alt="KiTKAT SIGNATURE - 전세계에서 사랑받는 네슬레의 대표 초콜릿 킷캣과 네스카페와의 만남, 오직 이태원에서만 만날 수 있습니다."></h3>
+
+			<!--시작: .menu-content -->
+			<div class="menu-content">
+
+				<ul class="menu-content__list">
+					<li class="menu-content__item"><a class="js-menuBtn" href="#none" data-menuname="kitkat-brownie"><img src="./images/menu/kitkat-brownie.jpg" alt="킷캣 브라우니"></a></li>
+					<li class="menu-content__item"><a class="js-menuBtn" href="#none" data-menuname="kitkat-muffin"><img src="./images/menu/kitkat-muffin.jpg" alt="킷캣 머핀"></a></li>
+					<li class="menu-content__item"><a class="js-menuBtn" href="#none" data-menuname="kitkat-avocado"><img src="./images/menu/kitkat-avocado.jpg" alt="킷캣 아보가토"></a></li>
+				</ul>
+
+				<!--시작: .menu-caution -->
+				<ul class="menu-caution">
+					<li>- HOT &amp; ICE 음료 가격 동일합니다.</li>
+					<li>- 1회 제공량 갈로리는 Regular 사이즈 기준입니다.</li>
+					<li>- 제품의 이름과 가격은 네스카페 이태원만의 것으로, 다른 네스카페 매장과 차이가 있을 수 있습니다.</li>
+				</ul>
+				<!-- // 끝: .menu-caution -->
+			</div>
+			<!-- // 끝: .menu-content -->
+
+		</div>
+		<!-- // 끝: .wrap-inner -->
+
+	</div>
+	<!-- // 끝: .wrap -->
+
+	<!-- popup -->
+	<div class="dim js-dim"></div>
+
+	<div class="menu-detail js-menuDetail">
+		<!--시작: .menu-left -->
+		<div class="menu-detail--left">
+
+			<img class="js-bigImg" src="./images/menu/popup/blank-big.jpg" alt="">
+
+			<!--시작: .menu__thumbs -->
+			<div class="menu-detail__thumb js-thumb" id="thumbWrap">
+				<a class="menu-detail__thumb-link on" href="#none"><img src="./images/menu/popup/blank.jpg" alt=""></a>
+				<a class="menu-detail__thumb-link" href="#none"><img src="./images/menu/popup/blank.jpg" alt=""></a>
+				<a class="menu-detail__thumb-link" href="#none"><img src="./images/menu/popup/blank.jpg" alt=""></a>
+			</div>
+			<!-- // 끝: .menu__thumbs -->
+
+		</div>
+		<!-- // 끝: .menu-left -->
+
+		<!--시작: .menu-right -->
+		<div class="menu-detail--right">
+			<dl>
+					<dt class="menu-detail--right__tit"><h1 class="js-menuTit"><img src="./images/menu/popup/tit-cake-cheese.png" alt="kitkat brownie - 킷캣 브라우니"></h1></dt>
+					<dd class="menu-detail--right__txt js-menuDiscription">
+						<ul>
+							<li>7.500원</li>
+							<li>1회 제공량: 908kcal</li>
+						</ul>
+
+						<p>진한 브라우니 시트 사이에 킷캣 초콜릿과 다크초콜릿 가나슈가 샌드된 네스카페 시그니쳐 브라우니</p>
+					</dd>
+			</dl>
+
+			<ul class="menu-detail__caution">
+				<li><strong><img src="./images/menu/popup/caution.png" alt="상기 이미지는 실제 제품과 다소 차이가 있을 수 있습니다.(토핑 과일은 계절에 따라 달라질 수 있습니다.)"></strong></li>
+			</ul>
+		</div>
+		<!-- // 끝: .menu-right -->
+		<button class="menu-detail__close js-close" type="button"><span class="screen-out">닫기</span></button>
+	</div>
+
+	<!-- // popup -->
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+	<script src="./js/menu.js"></script>
+</body>
+</html>

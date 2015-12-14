@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=640">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/menuM.css">
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="./js/jquery.bxslider.js"></script>
+</head>
+<body>
+	<!--시작: .wrap -->
+	<div class="mWrap">
+
+		<!--시작: .header -->
+		<div class="mHeader" id="mHeader">
+			<h1><a href="#" class="mLogo"><img src="./images/m/logo.png" alt="nescafe itaewon"></a></h1>
+			<a class="mHeader-toggle" href="#">네비게이션</a>
+		</div>
+		<!-- // 끝: .header -->
+
+		<!--시작: .container -->
+		<div class="mContainer">
+
+			<!--시작: .mNav -->
+			<ul class="mNav">
+				<li class="mNav-item mNav-item__itaewon"><a class="mNav-link mNav-itaewon" href="#">nescafe itaewon</a></li>
+				<li class="mNav-item mNav-item__menu"><a class="mNav-link mNav-menu" href="#">menu</a></li>
+				<li class="mNav-item mNav-item__event"><a class="mNav-link mNav-event" href="#">event</a></li>
+				<li class="mNav-item mNav-item__ambassador"><a class="mNav-link mNav-ambassador" href="#">ambassador</a></li>
+			</ul>
+			<!-- // 끝: .mNav -->
+			<!--시작: .menu-wrap -->
+			<div class="menu-wrap">
+
+				<a class="loc__btn" href="#none"><p class="loc"><span class="loc__bg"><i class="loc__bg__arrow on"></i></span><img class="loc__txt" src="./images/menu/m/location-kitkat.png" alt="menu > kitkat"></p></a>
+
+				<!--시작: .menu-list-wrap -->
+				<div class="menu-list-wrap on">
+					<!--시작: .menu-list -->
+					<ul class="menu-list">
+						<li class="menu-list__item"><a href="#none"><img src="./images/menu/m/btn-nescafe.png" alt="nescafe"></a></li>
+						<li class="menu-list__item"><a href="#none"><img src="./images/menu/m/btn-dolce.png" alt="nescafe dolce gusto"></a></li>
+						<li class="menu-list__item"><a href="#none"><img src="./images/menu/m/btn-tea.png" alt="tea"></a></li>
+						<li class="menu-list__item"><a href="#none"><img src="./images/menu/m/btn-beverage.png" alt="beverage"></a></li>
+						<li class="menu-list__item"><a href="#none"><img src="./images/menu/m/btn-sandwich.png" alt="sandwiches/salad"></a></li>
+						<li class="menu-list__item"><a href="#none"><img src="./images/menu/m/btn-cake.png" alt="cake"></a></li>
+						<li class="menu-list__item"><a href="#none"><img src="./images/menu/m/btn-kitkat.png" alt="kitkat signature"></a></li>
+					</ul>
+					<!-- // 끝: .menu-list -->
+
+					<button class="menu-list__close"><span class="screen-out">닫기</span></button>
+				</div>
+				<!-- // 끝: .menu-list-wrap -->
+
+				<h2 class="menu-subTit menu-subTit--beverage"><img src="./images/menu/m/subTit-beverage.png" alt="beverage - 때로는 커피가 아닌 상큼하게 즐기실 수 있는 음료 종류는 어떠신가요?"></h2>
+
+				<!--시작: .menu-con-list -->
+				<ul class="menu-con-list js-showPop">
+					<li class="menu-con-list__item"><a data-menuname="mBeverage-choco" href="#none"><img src="./images/menu/m/beverage-choco.jpg" alt="핫 초콜릿"></a></li>
+					<li class="menu-con-list__item"><a data-menuname="mBeverage-choco-ice" href="#none"><img src="./images/menu/m/beverage-choco-ice.jpg" alt="초콜릿 아이스"></a></li>
+					<li class="menu-con-list__item"><a data-menuname="mBeverage-plain" href="#none"><img src="./images/menu/m/beverage-plain.jpg" alt="플레인 요거트 스무디"></a></li>
+					<li class="menu-con-list__item"><a data-menuname="mBeverage-blueberry" href="#none"><img src="./images/menu/m/beverage-blueberry.jpg" alt="블루베리 요거트 스무디"></a></li>
+					<li class="menu-con-list__item"><a data-menuname="mBeverage-strawberry" href="#none"><img src="./images/menu/m/beverage-strawberry.jpg" alt="스트로베리 요거트 스무디"></a></li>
+					<li class="menu-con-list__item"></li>
+				</ul>
+				<!-- // 끝: .menu-con-list -->
+
+				<!--시작: .menu-caution -->
+				<ul class="menu-caution">
+					<li>HOT &amp; ICE 음료 가격 동일합니다.</li>
+					<li>1회 제공량 칼로리는 Regular 사이즈 기준입니다.</li>
+					<li>제품의 이름과 가격은 네스카페 이태원만의 것으로, 다른 네스카페 매장과 차이가 있을 수 있습니다.</li>
+				</ul>
+				<!-- // 끝: .menu-caution -->
+
+
+			</div>
+			<!-- // 끝: .menu-wrap -->
+
+			<!-- popup -->
+			<div class="menu-pop">
+				<h1 class="menu-pop__tit"><img src="./images/menu/popup/mTit-nescafe-original.png" alt="nescafe original - 네스카페 오리지널"></h1>
+				<!--시작: .menu-pop__pic -->
+				<div class="menu-pop__pic">
+					<img class="menu-pop__pic--left" src="./images/menu/popup/mNescafe-original-big0.jpg" alt="">
+					<ul class="menu-pop__pic--right">
+						<li class="menu-pop__pic__thumb"><a class="menu-pop__pic__link" href="#none"><img src="./images/menu/popup/mNescafe-original-thumb0.jpg" alt=""></a></li>
+						<li class="menu-pop__pic__thumb"><a class="menu-pop__pic__link" href="#none"><img src="./images/menu/popup/mNescafe-original-thumb1.jpg" alt=""></a></li>
+						<li class="menu-pop__pic__thumb"><a class="menu-pop__pic__link" href="#none"><img src="./images/menu/popup/mNescafe-original-thumb2.jpg" alt=""></a></li>
+					</ul>
+				</div>
+				<!-- // 끝: .menu-pop__pic -->
+
+				<!--시작: .menu-pop__disc -->
+				<div class="menu-pop__disc">
+					<ul>
+						<li>regular: 4,100원/ large: 4,600원</li>
+						<li>1회 제공량: 12kcal</li>
+					</ul>
+					<p>뜨거운 물에 에스프레소를 희석하여 커피 본연의 부드럽고 깊은 맛을 느낄 수 있는 커피</p>
+				</div>
+				<!-- // 끝: .menu-pop__disc -->
+
+				<ul class="menu-pop__caution">
+					<li>상기 이미지는 실제 제품과 다소 차이가 있을 수 있습니다.(토핑 과일은 계절에 따라 달라질 수 있습니다.)</li>
+					<li>1회 제공량은 regular 사이즈 기준입니다.</li>
+				</ul>
+				<button class="menu-pop__close"><span class="screen-out">닫기</span></button>
+			</div>
+			<!-- // popup -->
+		</div>
+		<!-- // 끝: .container -->
+
+	</div>
+	<!-- // 끝: .wrap -->
+
+
+
+	<!--시작: .dim -->
+	<div class="mDim"></div>
+	<!-- // 끝: .dim -->
+
+
+
+	<script>
+		function checkCategory(){
+			var arrow = $('.loc__bg__arrow');
+			var category = $('.menu-list-wrap');
+
+			if(!arrow.hasClass('on') && !category.hasClass('on')){
+				arrow.addClass('on');
+				category.addClass('on');
+			} else {
+				arrow.removeClass('on');
+				category.removeClass('on');
+			}
+		}
+
+		$('.loc__btn').click(function(e){
+			e.preventDefault();
+			checkCategory();
+
+		});
+
+		$('.menu-list__close').click(function(){
+			checkCategory();
+		});
+
+	</script>
+
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+
+
+
+</body>
+</html>

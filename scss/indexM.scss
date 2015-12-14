@@ -1,0 +1,493 @@
+@charset 'UTF-8';
+
+@import 'reset';
+@import 'variable';
+@import 'extend';
+@import 'mixin';
+
+/*********************
+ 	common
+ *********************/
+
+ .screen-out {
+ 	position: absolute;
+ 	top: -9999em;
+ 	text-indent: -9999em;
+ }
+
+ .mWrap {
+		// @include debug;
+		width: $width-m;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+	}
+
+/**********
+	header
+***********/
+.mHeader {
+	text-align: center;
+	padding:  32px 0 34px;
+	background: #eadcc2;
+	position: relative;
+
+	.mLogo { display: inline-block; }
+
+	&-toggle {
+		// @include debug;
+		display: block;
+		position: absolute;
+		width: 50px;
+		height: 33px;
+		top: 37px;
+		right: 22px;
+
+		&__line:before,
+		&__line,
+		&__line:after {
+			content: '';
+			cursor: pointer;
+			height: 3px;
+			width: 100%;
+			background: #000;
+			display: block;
+			position: absolute;
+			border-radius: 1px;
+			-webkit-transition: all 300ms ease-in-out;
+			        transition: all 300ms ease-in-out;
+
+		}
+
+		&__line:before { top: -15px; }
+		&__line { top: 15px; }
+		&__line:after { bottom: -15px; }
+
+		&.on {
+			& .mHeader-toggle__line { background: transparent; }
+			& .mHeader-toggle__line:before,
+			& .mHeader-toggle__line:after { top: 0; }
+
+			& .mHeader-toggle__line:before {
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+			& .mHeader-toggle__line:after {
+				-webkit-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+			}
+		}
+		/* @include backgroundM('toggle','png',$x: 0);
+		display: block;
+		width: 50px;
+		height: 43px;
+		position: absolute;
+		top: 37px;
+		right: 22px;
+		text-indent: -9999em;
+
+		&.on { background-position: 0 bottom; } */
+	} // toggle
+}
+
+/**********
+	container
+***********/
+.mContainer {
+	position: relative; text-align: center;
+
+	&.lv1 {
+		.mTab,
+		.mFloor2,
+		.mFloor3,
+		.mFloor4 { display: none; }
+	} // lv1
+
+	&.lv2 {
+		.mFloor1,
+		.mFloor3,
+		.mFloor4 { display: none; }
+	} // lv2
+
+	&.lv3 {
+		.mFloor1,
+		.mFloor2,
+		.mFloor4 { display: none; }
+	} // lv3
+
+	&.lv4 {
+		.mFloor1,
+		.mFloor2,
+		.mFloor3 { display: none; }
+	} // lv4
+}
+
+
+.mDim {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	z-index: 10;
+	display: none;
+
+	&.on { display: block; }
+
+}
+/**********
+	nav
+***********/
+.mNav {
+	// @include debug;
+	position: absolute;
+	top: 0;
+	right: -400px; //-400
+	height: 100%;
+	background: #f6f1e6;
+	z-index: 100;
+	-webkit-transition: -webkit-transform 600ms;
+	        transition: transform 600ms;
+
+	&.on {
+		-webkit-transform: translate(-400px, 0);
+		    -ms-transform: translate(-400px, 0);
+		        transform: translate(-400px, 0);
+	}
+
+	&-item {
+		@include backgroundM('nav-bottom-line','png');
+		&:first-child { background: none; }
+	} // item
+
+	&-link {
+		@include backgroundM('nav-img-ir','png',$y:50px);
+		// @include debug;
+		display: block;
+		width: 400px;
+		margin: {
+			left: auto;
+			right: auto;
+		}
+		text-indent: -99999em;
+	}
+
+	&-itaewon {
+		height: 147px;
+		padding: { top: 50px; bottom: 19px; }
+	} // itaewon
+
+	&-menu {
+		height: 149px;
+		padding: { top: 29px; bottom: 19px; }
+		background-position: center -169px;
+	} // menu
+
+	&-event {
+		height: 140px;
+		padding: { top: 38px; bottom: 19px; }
+		background-position: center -369px;
+	} // event
+
+	&-ambassador {
+		height: 136px;
+		padding-top: 41px;
+		background-position: center -568px;
+	} // ambassador
+}
+
+/**********
+	mSection, mFloors
+***********/
+/* .mSection, .mFloors {
+	// @include debug(blue);
+	text-align: center;
+	position: relative;
+	display: none;
+
+	&.on { display: block; }
+}
+ */
+
+/**********
+	mTab
+***********/
+.mTab {
+	// @include debug;
+	overflow: hidden;
+	width: 560px;
+	position: absolute;
+	top: 24px;
+	left: 50%;
+	margin-left: -280px;
+	z-index: 10;
+
+	&-item {
+		float: left;
+		margin-left: 8px;
+		&:first-child { margin-left: 0; }
+	} // item
+
+	&-link {
+		// @include debug;
+		@include backgroundM('tab-ir','png', $x: 0);
+		display: block;
+		height: 76px;
+		width: 180px;
+		text-indent: -9999em;
+
+		&__lv2 { &.on { background-position: 0 bottom; } }
+		&__lv3 {
+			background-position: center top;
+			&.on { background-position: center bottom; }
+		}
+		&__lv4 {
+			background-position: right top;
+			&.on { background-position: right bottom; }
+		}
+	} // link
+}
+
+/**********
+	층별 소개 버튼들
+***********/
+.goLoc {
+	&-link { display: block; position: absolute; }
+
+	// lv2
+	&-menu { top: 563px; left: 13px; }
+	&-self { top: 413px; left: 112px; }
+	&-welcoming { top: 547px; left: 230px; }
+	&-video { top: 661px; left: 314px; }
+
+	// lv3
+	&-tiny { top: 660px; left: 228px; }
+	&-community { top: 426px; left: 265px; }
+
+	// lv4
+	&-led { top: 479px; left: 208px; }
+}
+
+/**********
+	floor1
+***********/
+.mFloor1 {
+	@include backgroundM('floor1-visual','png',$y: bottom,$color: #8dbfc5);
+	min-height: 947px;
+
+	&-link {
+		position: absolute;
+		top: 40px;
+		left: 50%;
+		margin-left: -37.5px;
+	}
+
+	&-txt { display: inline-block; margin-top: 150px; }
+	&-tit { margin-top: 25px; }
+	&-open-day { margin-top: 38px; }
+
+	.dday { margin-top: 18px; }
+	.video { position: absolute; top: 412px; right: 40px; }
+}
+
+/**********
+	roll
+***********/
+.mRoll {
+	height: 100%;
+	// @include debug;
+	// position: relative;
+
+	&-item { position: relative; min-height: 990px; }
+
+	&__sec1 {
+		@include backgroundM('bg-floor2','png');
+		min-height: 990px - 146px;
+		padding-top: 146px;
+	} // sec1
+
+	&__sec2 { @include backgroundM('bg-welcoming','png'); } // sec2
+	&__sec3 { @include backgroundM('bg-menu','png'); } // sec3
+	&__sec4 { @include backgroundM('bg-video','png'); } // sec4
+	&__sec5 { @include backgroundM('bg-self','png'); } // sec5
+	&__sec6 {
+		@include backgroundM('bg-floor3','png');
+		padding-top: 125px;
+		min-height: 990px - 125px;
+	} // sec6
+	&__sec7 { @include backgroundM('bg-tiny','png'); } // sec7
+	&__sec8 { @include backgroundM('bg-community','png'); } // sec8
+	&__sec9 {
+		@include backgroundM('bg-floor4','png');
+		padding-top: 128px;
+		min-height: 990px - 128px;
+	} // sec9
+	&__sec10 { @include backgroundM('bg-community','png'); } // sec10
+
+	// detail
+	.mDetail {
+		@include backgroundM('tit-welcoming','png');
+		width: 478px;
+		height: 470px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: { left: -239px; top: -235px; }
+
+		&-wrap {
+			display: none;
+			margin-top: -40px;
+
+			&.on { display: block; }
+		}
+
+		&-tit { margin-top: 124px; }
+		// &-txt { margin-top: 35px; }
+
+		// btn
+		&-btn {
+			display: inline-block;
+			margin-top: 490px;
+		} // btn
+	} // detail
+
+} // mroll
+
+
+/**********
+	arrow
+***********/
+.mArrow {
+	position: absolute;
+	top: 50%;
+	width: 39px;
+	height: 64px;
+	display: block;
+	margin-top: -32px;
+
+	.bx-prev,
+	.bx-next {
+		display: block;
+		text-indent: -9999em;
+		height: 100%;
+	}
+
+	.bx-prev { @include backgroundM('arrow','png',$x:left); }
+	.bx-next { @include backgroundM('arrow','png',$x:right); }
+
+	&-prev { left: 20px; }
+	&-next { right: 20px; }
+}
+
+/**********
+	floor2
+***********/
+.mFloor {
+	&-pager {
+		position: absolute;
+		overflow: hidden;
+		bottom: 30px;
+		left: 50%;
+
+		li {
+			&:first-child { margin-left: 0; }
+			float: left;
+			margin-left: 11px;
+		}
+
+		&-link {
+			display: block;
+			text-indent: -9999em;
+			width: 30px;
+			height: 30px;
+			overflow: hidden;
+			@include backgroundM('pager','png',$x: left);
+
+			&.active { background-position: right top; }
+		} // link
+	} // pager
+
+}
+
+/**********
+	floor2
+***********/
+.mFloor2 {
+	.mFloor-pager { width: 153px; margin-left: -77px; }
+}
+
+/**********
+	floor3
+***********/
+.mFloor3 {
+	.mFloor-pager { width: 71px; margin-left: -35.5px; }
+}
+
+/**********
+	floor4
+***********/
+.mFloor4 {
+	.mFloor-pager {width: 30px; margin-left: -15px; }
+	.mDetail-tit { margin-top: 97px; }
+}
+
+/**********
+	popup
+***********/
+$width-comingSoon: 483px;
+$height-comingSoon: 473px;
+
+.mComingSoon {
+	@include backgroundM('bg-comingSoon','png');
+	width: $width-comingSoon;
+	height: $height-comingSoon;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: none;
+	z-index: 10;
+	margin: {
+		left: ($width-comingSoon / 2) * -1;
+		top: ($height-comingSoon / 2) * -1;
+	}
+
+	&.on { display: block; }
+
+	&-tit { margin-top: 101px; margin-left: 145px; text-align: left; }
+	&-btn {
+		@extend %btn-default;
+		@include backgroundM('btn-popOk','png');
+		width: 187px;
+		height: 51px;
+		margin-top: 43px;
+	}
+
+	.mClose {
+		@extend %btn-default;
+		@include backgroundM('btn-close','png');
+		width: 46px;
+		height: 47px;
+		position: absolute;
+		top: 38px;
+		right: -16px;
+	}
+}
+
+/************************ itaewon nescafe ****************************/
+.discription {
+	@include backgroundM('disc-bg','png',$x:0, $y:-46px ,$color: #000);
+	position: relative;
+	min-height: 947px - 120;
+	padding: 120px 48px 0 0;
+	text-align: right;
+
+	&__date { margin-top: 25px; }
+	&__logo { margin-top: 24px; }
+
+	&__btn { position: absolute; top: 371px; left: 73px; }
+}

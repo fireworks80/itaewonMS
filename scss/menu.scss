@@ -1,0 +1,338 @@
+@charset 'UTF-8';
+
+@import 'reset';
+@import 'variable';
+@import 'extend';
+@import 'mixin';
+
+/*********************
+ 	common
+ *********************/
+
+ .screen-out {
+ 	position: absolute;
+ 	top: -9999em;
+ 	text-indent: -9999em;
+ }
+
+ .mDim {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	z-index: 10;
+	display: none;
+
+	&.on { display: block; }
+
+}
+	/**********
+	header
+***********/
+.mHeader {
+	text-align: center;
+	padding:  32px 0 34px;
+	background: #eadcc2;
+	position: relative;
+
+	.mLogo { display: inline-block; }
+
+	&-toggle {
+		// @include debug;
+		@include backgroundM('toggle','png',$x: 0);
+		display: block;
+		width: 50px;
+		height: 43px;
+		position: absolute;
+		top: 37px;
+		right: 22px;
+		text-indent: -9999em;
+
+		&.on { background-position: 0 bottom; }
+	} // toggle
+}
+ .mWrap {
+		@include debug;
+		width: $width-m;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+	}
+
+/**********
+	nav
+***********/
+.mNav {
+	// @include debug;
+	position: absolute;
+	top: 0;
+	right: -400px; //-400
+	height: 100%;
+	background: #f6f1e6;
+	z-index: 100;
+
+	&-item {
+		@include backgroundM('nav-bottom-line','png');
+		&:first-child { background: none; }
+	} // item
+
+	&-link {
+		@include backgroundM('nav-img-ir','png',$y:50px);
+		// @include debug;
+		display: block;
+		width: 400px;
+		margin: {
+			left: auto;
+			right: auto;
+		}
+		text-indent: -99999em;
+	}
+
+	&-itaewon {
+		height: 147px;
+		padding: { top: 50px; bottom: 19px; }
+	} // itaewon
+
+	&-menu {
+		height: 149px;
+		padding: { top: 29px; bottom: 19px; }
+		background-position: center -169px;
+	} // menu
+
+	&-event {
+		height: 140px;
+		padding: { top: 38px; bottom: 19px; }
+		background-position: center -369px;
+	} // event
+
+	&-ambassador {
+		height: 136px;
+		padding-top: 41px;
+		background-position: center -568px;
+	} // ambassador
+}
+
+/******************************* menu ******************************/
+
+.menu-wrap {
+	width: 600px;
+	margin: 0 auto;
+	padding-bottom: 80px;
+}
+
+/* index */
+.menu-tit {
+	text-align: center;
+	margin-top: 49px;
+}
+
+/* index - menu list */
+.menu-list {
+	// @include debug;
+	overflow: hidden;
+	margin-top: 19px;
+
+	&-wrap {
+		position: relative;
+		display: none;
+
+		&.on { display: block; }
+	} // wrap
+
+	&__item {
+		float: left;
+		margin-top: 10px;
+
+		&:nth-child(2n) { margin-left: 10px; }
+	}
+
+	&__close {
+		@include background('menu/m/btn-close','png');
+		width: 107px;
+		height: 30px;
+		position: absolute;
+		bottom: 0;
+		right: 10px;
+		border: none;
+		cursor: pointer;
+	} // close
+}
+
+/* index - menu contents */
+.menu-contents {
+	// @include debug;
+	margin-top: 27px;
+	padding-bottom: 27px;
+	overflow:hidden;
+
+	&__link {
+		display: block;
+
+		&:nth-child(2),
+		&:last-child { margin-top: 8px; }
+
+		&:nth-child(2) { float: left; }
+		&:last-child { float: right; }
+	}
+}
+
+/* subpage - location*/
+.loc {
+	@include debug;
+
+	* { vertical-align: top; }
+
+	&__btn {
+		display: inline-block;
+		margin-top: 30px;
+		margin-left: 10px;
+	}
+
+	&__bg {
+		@include background('menu/m/bg-location','png');
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+
+		&__arrow {
+			@include background('menu/m/arrow-location','png');
+			display: inline-block;
+			width: 16px;
+			height: 11px;
+			margin-left: 7px;
+			margin-top: 11px;
+			-webkit-transform:rotate(-90deg);
+			    -ms-transform:rotate(-90deg);
+			        transform:rotate(-90deg);
+			-webkit-transition: -webkit-transform 0.5s;
+			        transition: transform 0.5s;
+			&.on {
+				-webkit-transform:rotate(0deg);
+				    -ms-transform:rotate(0deg);
+				        transform:rotate(0deg);
+			}
+		}
+	} //bg
+
+	&__txt { margin-top: 4px; margin-left: 19px; }
+}
+
+/* menu sub title */
+.menu-subTit { margin-top: 30px; }
+
+/* menu con list */
+.menu-con-list {
+	@include debug;
+	overflow: hidden;
+	width: 540px;
+	margin: 0 auto;
+
+	&__item {
+		float: left;
+		margin-top: 17px;
+		width: 270px;
+		height: 307px;
+		border-bottom: 1px solid #ddd;
+	}
+}
+
+/* menu caution */
+.menu-caution {
+	@include background('menu/m/menu-caution-drink','png');
+	width: 440px;
+	height: 104px;
+	text-indent: -9999em;
+	overflow: hidden;
+	margin-left: 30px;
+	margin-top: 40px;
+}
+
+/******************************* menu popup ******************************/
+.menu-pop {
+	@include debug(blue);
+	position: absolute;
+	top: 110px;
+	left: 0;
+	padding: 49px 20px 29px;
+	background: #fff;
+	display: none;
+
+	&.on { display: block; }
+
+	&__tit { margin-left: 20px; }
+
+	&__pic {
+		@include debug(orange);
+		margin: 16px auto 0;
+		overflow: hidden;
+		width: 540px;
+
+		&--left { float: left; border: 1px solid #e1e1e1; }
+		&--right { float: right; }
+
+		&__thumb {
+			margin-top: 10px;
+			&:first-child { margin-top: 0; }
+			width: 123px;
+			height: 123px;
+			border: 1px solid #ddd;
+		}// thumb
+
+		&__link {
+			display: block;
+		} // link
+	} // pic
+
+	&__disc {
+		@include background('menu/popup/mDisc-nescafe-original','png');
+		width: 600px;
+		height: 230px;
+		overflow: hidden;
+		margin-top: 28px;
+		text-indent: -9999em;
+	} // disc
+
+	&__caution {
+		@include background('menu/popup/mCaution-drink','png');
+		overflow: hidden;
+		width: 495px;
+		height: 74px;
+		margin-top: 18px;
+		margin-left: 15px;
+		text-indent: -9999em;
+	} // caution
+
+	&__close {
+		@include background('menu/popup/mClose','png');
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		border: none;
+	}
+}
+
+/* dolce gusto */
+.dolcegusto-txt-area {
+	// @include debug;
+	@include background('menu/m/bg-dolce','png',$y: 25px);
+	padding-top: 393px;
+	margin-top: 20px;
+	text-align: center;
+
+	&__txt { margin-top: 29px; }
+}
+
+/* kitkat */
+.menu-subTit--kitkat { margin-top: 23px; }
+
+/*beverage*/
+.menu-subTit--beverage { margin-top: 18px; }
+
+/*tea*/
+.menu-subTit--tea { margin-top: 16px; }

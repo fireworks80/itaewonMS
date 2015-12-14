@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/itaewon.css">
+	<link rel="stylesheet" href="./css/popup.css">
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="./js/jquery.fullPage.js"></script>
+	<script src="./js/jquery.disablescroll.min.js"></script>
+	<script src="./js/jquery.bxslider.min.js"></script>
+</head>
+<body>
+	<!-- gnb -->
+	<div class="gnb">
+		<div class="gnb-inner">
+			<h1 class="logo"><img src="./images/logo.png" alt="Nescafe.itaewon"></h1>
+			<!-- nav -->
+			<ul class="gnb-list">
+				<li class="gnb-item"><a href="#"><img src="./images/gnb-itaewon.png" alt=""></a></li>
+				<li class="gnb-item"><a href="#"><img src="./images/gnb-menu.png" alt=""></a></li>
+				<li class="gnb-item"><a href="#"><img src="./images/gnb-event.png" alt=""></a></li>
+				<li class="gnb-item"><a href="#"><img src="./images/gnb-ambassador.png" alt=""></a></li>
+			</ul>
+			<!-- // nav -->
+		</div>
+	</div>
+	<!-- // gnb -->
+
+	<!-- 네비게이션 -->
+	<dl class="lnb" id="lnb">
+		<dt><span class="screen-out">floor info</span></dt>
+		<dd class="lnb-item" data-menuanchor="firstPage">
+			<a class="lnb-btn lnb-btn--lv4" href="#floor-4"><span class="screen-out">level4</span></a>
+			<span class="lnb-txt lnb-txt--lv4"><img src="./images/nav-floor0-txt.png" alt="fun rooftop"></span>
+		</dd>
+		<dd class="lnb-item" data-menuanchor="secondPage">
+			<a class="lnb-btn lnb-btn--lv3" href="#floor-3"><span class="screen-out">level3</span></a>
+			<span class="lnb-txt lnb-txt--lv3"><img src="./images/nav-floor1-txt.png" alt="zen lounge"></span>
+		</dd>
+		<dd class="lnb-item" data-menuanchor="3rdPage">
+			<a class="lnb-btn lnb-btn--lv2" href="#floor-2"><span class="screen-out">level2</span></a>
+			<span class="lnb-txt lnb-txt--lv2"><img src="./images/nav-floor2-txt.png" alt="active digital zone"></span>
+		</dd>
+	</dl>
+	<!-- // 네비게이션 -->
+
+	<!-- wrap -->
+	<div class="wrap">
+
+		<!-- floor - 4 -->
+		<div class="section floor4 extending" id="floor-4">
+
+			<!-- 롤링 이미지 wrap -->
+			<div class="rolling">
+
+				<ul class="rolling-list js-rolling4">
+					<li class="rolling__item">
+						<!-- wrap-inner -->
+						<div class="wrap-inner">
+							<div class="floor4__extend">
+								<a class="disc disc-led" href="#none" onclick="goPage4(this,'.js-pager4','.js-disc4')" data-locname="led">
+									<img src="./images/btn-led.png" alt="led chair">
+								</a>
+							</div>
+						</div>
+						<!-- // wrap-inner -->
+						<img class="rolling__bg" src="./images/floor4-bg.png" alt="">
+					</li>
+
+					<li class="rolling__item rolling__item--last"><!--<img class="rolling__bg" src="./images/floor-led.png" alt="">--></li>
+				</ul>
+
+				<!-- detail 페이져 -->
+				<div class="section-detail js-pager4">
+					<a class="section-detail__back js-goBack" type='button' href="#none" onclick="goBack('.js-pager4','.js-disc4');" data-slide-index="0">
+						<span class="screen-out">뒤로가기</span>
+					</a>
+					<ul class="section-detail__list">
+						<li class="section-detail__item">
+							<a class="section-detail__link link-led" href="#none" data-slide-index="1">
+								<span class="screen-out">led chair</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- // detail -->
+
+				<!--  롤링 이미지 설명 -->
+				<div class="wrap-inner detail-wrap js-disc4">
+					<div class="detail">
+						<h2><img src="./images/tit-pop-led.png" alt="led chair"></h2>
+						<p class="detail__txt"><img src="./images/txt-pop-led.png" alt="시원함 바람과 네스카페를 즐기며 LED 체어 조명을 조절해 보세요!"></p>
+						<a class="detail__btn" href="#none" onclick="popupToggle('.dim','.comingSoon',true);"><img src="./images/btn-detail.png" alt="자세히 보기"></a>
+					</div>
+				</div>
+				<!-- // 롤링 이미지 설명 -->
+			</div>
+			<!-- // 롤링 이미지 wrap -->
+		</div>
+		<!-- // floor - 4 -->
+
+		<!-- floor - 3 -->
+		<div class="section floor3 extending" id="floor-3">
+
+			<!-- 롤링 이미지 wrap -->
+			<div class="rolling">
+
+				<ul class="rolling-list js-rolling3">
+					<li class="rolling__item">
+						<!-- wrap-inner -->
+						<div class="wrap-inner">
+							<div class="floor3__extend">
+								<a class="disc disc-tiny1" href="#none" onclick="goPage3(this,'.js-pager3','.js-disc3')" data-locname="tiny">
+									<img src="./images/btn-tiny.png" alt="tiny screen">
+								</a>
+								<a class="disc disc-community" href="#none" onclick="goPage3(this,'.js-pager3','.js-disc3')"  data-locname="community">
+									<img src="./images/btn-community.png" alt="community wall">
+								</a>
+							</div>
+							<a class="linker" href="#floor-4"><img src="./images/btn-up_sec.png" alt="level 3 가기"></a>
+						</div>
+						<!-- // wrap-inner -->
+						<img class="rolling__bg" src="./images/floor3-bg.png" alt="">
+					</li>
+
+					<li class="rolling__item rolling__item--two"><!--<img class="rolling__bg" src="./images/floor-tiny.png" alt="">--></li>
+					<li class="rolling__item rolling__item--last"><img class="rolling__bg" src="./images/floor-community.png" alt=""></li>
+				</ul>
+
+				<!-- detail 페이져 -->
+				<div class="section-detail js-pager3">
+					<a class="section-detail__back js-goBack" type='button' href="#none" onclick="goBack('.js-pager3','.js-disc3');" data-slide-index="0">
+						<span class="screen-out">뒤로가기</span>
+					</a>
+					<ul class="section-detail__list">
+						<li class="section-detail__item">
+							<a class="section-detail__link link-tiny" href="#none" onclick="detailImgChange('.js-floor3-disc-tit','.js-floor3-disc-txt','tiny');" data-slide-index="1">
+								<span class="screen-out">tiny screen</span>
+							</a>
+						</li>
+						<li class="section-detail__item">
+							<a class="section-detail__link link-community" href="#none" data-slide-index="2" onclick="detailImgChange('.js-floor3-disc-tit','.js-floor3-disc-txt','community');">
+								<span class="screen-out">community wall</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- // detail -->
+
+				<!--  롤링 이미지 설명 -->
+				<div class="wrap-inner detail-wrap js-disc3">
+					<div class="detail">
+						<h2><img class="js-floor3-disc-tit" src="./images/tit-pop-tiny.png" alt="tiny screen"></h2>
+						<p class="detail__txt"><img class="js-floor3-disc-txt" src="./images/txt-pop-tiny.png" alt="네스카페 브랜드 영상을 감상해보세요!"></p>
+						<a class="detail__btn" href="#none" onclick="popupToggle('.dim','.comingSoon','true);"><img src="./images/btn-detail.png" alt="자세히 보기"></a>
+						<!-- 이전 다음 -->
+						<a class="arrow arrow-prev arrow-prev3" href="#none"><span class="screen-out">이전</span></a>
+						<a class="arrow arrow-next arrow-next3" href="#none"><span class="screen-out">다음</span></a>
+						<!-- // 이전 다음 -->
+					</div>
+				</div>
+				<!-- // 롤링 이미지 설명 -->
+			</div>
+			<!-- // 롤링 이미지 wrap -->
+
+		</div>
+		<!-- // floor - 3 -->
+
+		<!-- floor-2	 -->
+		<div class="section floor2 extending" id="floor-2">
+
+			<!-- 롤링 이미지 wrap -->
+			<div class="rolling">
+				<ul class="rolling-list js-rolling2">
+					<li class="rolling__item">
+						<!-- wrap-inner -->
+						<div class="wrap-inner">
+							<div class="floor2__extend">
+								<a class="disc disc-welcoming" href="#none" onclick="goPage2(this,'.js-pager2','.js-disc2')" data-locname="welcoming">
+									<img src="./images/btn-welcoming.png" alt="welcoming wall">
+								</a>
+								<a class="disc disc-menu" href="#none" onclick="goPage2(this,'.js-pager2','.js-disc2')" data-locname="menu">
+									<img src="./images/btn-menu.png" alt="digital menu board">
+								</a>
+								<a class="disc disc-video" href="#none" onclick="goPage2(this,'.js-pager2','.js-disc2')" data-locname="video">
+									<img src="./images/btn-video.png" alt="360 video experience">
+								</a>
+								<a class="disc disc-self" href="#none" onclick="goPage2(this,'.js-pager2','.js-disc2')" data-locname="self">
+									<img src="./images/btn-self.png" alt="self service library">
+								</a>
+							</div>
+							<a class="linker" href="#floor-3"><img src="./images/btn-up_sec.png" alt="level 3 가기"></a>
+						</div>
+						<!-- // wrap-inner -->
+						<img class="rolling__bg" src="./images/floor2-bg.png" alt="">
+					</li>
+					<li class="rolling__item"><img class="rolling__bg" src="./images/floor-welcome.png" alt=""></li>
+					<li class="rolling__item"><img class="rolling__bg" src="./images/floor-menu.png" alt=""></li>
+					<li class="rolling__item"><img class="rolling__bg" src="./images/floor-video.png" alt=""></li>
+					<li class="rolling__item"><img class="rolling__bg" src="./images/floor-self.png" alt=""></li>
+				</ul>
+
+				<!-- detail 페이져 -->
+				<div class="section-detail js-pager2">
+					<a class="section-detail__back js-goBack" type='button' href="#none" onclick="goBack('.js-pager2','.js-disc2');" data-slide-index="0">
+						<span class="screen-out">뒤로가기</span>
+					</a>
+					<ul class="section-detail__list">
+						<li class="section-detail__item">
+							<a class="section-detail__link link-welcome" href="#none" data-slide-index="1" onclick="detailImgChange('.js-floor2-disc-tit','.js-floor2-disc-txt','welcoming');">
+								<span class="screen-out">welcoming wall</span>
+							</a>
+						</li>
+						<li class="section-detail__item">
+							<a class="section-detail__link link-menu" href="#none" data-slide-index="2" onclick="detailImgChange('.js-floor2-disc-tit','.js-floor2-disc-txt','menu');">
+								<span class="screen-out">digital menu board</span>
+							</a>
+						</li>
+						<li class="section-detail__item">
+							<a class="section-detail__link link-video" href="#none" data-slide-index="3" onclick="detailImgChange('.js-floor2-disc-tit','.js-floor2-disc-txt','video');">
+								<span class="screen-out">360 video experience</span>
+							</a>
+						</li>
+						<li class="section-detail__item">
+							<a class="section-detail__link link-self" href="#none" data-slide-index="4" onclick="detailImgChange('.js-floor2-disc-tit','.js-floor2-disc-txt','self');">
+								<span class="screen-out">self service library</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- // detail -->
+
+				<!--  롤링 이미지 설명 -->
+				<div class="wrap-inner detail-wrap js-disc2">
+					<div class="detail">
+						<div class="circle-logo">
+							<img src="./images/circle-logo.png" alt="">
+						</div>
+						<h2 class="detail-tit"><img class="js-floor2-disc-tit" src="./images/tit-pop-welcoming.png" alt="welcoming wall"></h2>
+						<p class="detail__txt"><img class="js-floor2-disc-txt" src="./images/txt-pop-welcoming.png" alt="이제 입구에서 손쉽게 각 층의 분위기와 좌석을 함께 확인해보세요!"></p>
+						<a class="detail__btn" href="#none" onclick="popupToggle('.dim','.comingSoon',true);"><img src="./images/btn-detail.png" alt="자세히 보기"></a>
+						<!-- 이전 다음 -->
+						<a class="arrow arrow-prev2 arrow-prev" href="#none"><span class="screen-out">이전</span></a>
+						<a class="arrow arrow-next2 arrow-next" href="#none"><span class="screen-out">다음</span></a>
+						<!-- // 이전 다음 -->
+					</div>
+				</div>
+				<!-- // 롤링 이미지 설명 -->
+			</div>
+			<!-- // 롤링 이미지 wrap -->
+		</div>
+		<!-- // floor-2	 -->
+
+		<!-- floor-1 -->
+		<div class="section floor1" data-check="date" id="floor-1">
+
+			<!-- 밤 낮 배경 -->
+			<div class="day day-date"><span class="screen-out">낮</span></div>
+			<div class="day day-night"><span class="screen-out">밤</span></div>
+			<!-- 밤 낮 배경 -->
+
+			<!-- inner  1000px -->
+			<div class="wrap-inner">
+
+				<!-- 왼쪽 비쥬얼 -->
+				<div class="visual" id="visual">
+
+						<div class="roll-wrap">
+							<ul class="roll-list">
+								<li><img src="./images/floor1-scroll-0.png" alt=""></li>
+								<li><img src="./images/floor1-scroll-1.png" alt=""></li>
+							</ul>
+						</div>
+
+					<a class="visual-video" href="javascript: alert();"><img src="./images/floor1-video-btn.png" alt="video"></a>
+				</div>
+				<!-- // 왼쪽 비쥬얼 -->
+
+				<!-- text area -->
+				<div class="floor1__txt-area">
+					<h2><img class="txt-area__tit" src="./images/floor1-tit.png" alt="It all starts with a nescafe Welcome to nescafe! 2015.11.13 open"></h2>
+					<div class="countDown">
+						<em><span class="countDown-txt"><span class="screen-out">D-</span></span><span class="countDown-num"><img src="./images/num.png" alt="30"></span></em>
+					</div>
+				</div>
+				<!-- // text area -->
+
+				<!-- animation -->
+				<div class="animation js-animation">
+					<div class="light-bg js-lightBg"></div>
+					<!-- 밤하늘, 불빛 -->
+					<div class="building js-building"><span class="screen-out">빌딩</span></div><!-- 빌딩 -->
+
+					<!-- 옥상 -->
+					<div class="roof">
+						<i class="human human-roof1"><span class="screen-out">사람1</span></i>
+						<i class="human human-roof2"><span class="screen-out">사람2</span></i>
+						<i class="human human-roof3 js-shake"><span class="screen-out">사람3</span></i>
+						<i class="human human-roof4"><span class="screen-out">사람4</span></i>
+					</div>
+					<!-- // 옥상 -->
+
+					<!-- 거리 -->
+						<i class="human human-street1"><span class="screen-out">사람5</span></i>
+						<i class="human human-street2 js-sHuman2"><span class="screen-out">사람6</span></i>
+						<i class="human human-street3 js-sHuman3"><span class="screen-out">사람7</span></i>
+						<i class="human human-street4 js-sHuman4"><span class="screen-out">사람8</span></i>
+						<i class="human human-street5 js-bike"><span class="screen-out">사람9</span></i>
+					<!-- // 거리 -->
+
+				</div>
+				<!-- // animation -->
+
+				<a class="linker" href="#floor-2"><img src="./images/btn-up.png" alt="level 2 가기"></a>
+			</div> <!-- // inner 1000px-->
+
+		</div><!-- // floor-1 -->
+
+	</div><!-- // wrap -->
+
+	<!-- popup -->
+	<div class="dim js-dim"></div>
+
+	<!-- 커밍순 -->
+	<div class="comingSoon-wrap">
+		<div class="comingSoon pop">
+			<div class="comingSoon-txt"><img src="./images/txt-comingsoon.png" alt=""></div>
+			<button type="button" class="comingSoon-btn" onclick="popupToggle('.js-dim','.comingSoon',false);"><span class="screen-out">확인</span></button>
+			<button class="close" onclick="popupToggle('.js-dim','.comingSoon',false);"><span class="screen-out">닫기</span></button>
+		</div>
+	</div>
+	<!-- // 커밍순 -->
+
+	<!-- // popup -->
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+	<script src="./js/itaewon.js"></script>
+	<script>
+
+
+        // 2층 슬라이드
+        var floor2Roll = $('.js-rolling2').bxSlider({
+            pagerCustom: '.js-pager2',
+            nextSelector: '.arrow-next2',
+            prevSelector: '.arrow-prev2',
+            onSlideBefore: function ($elem, oldIdx, newIdx) {
+                var currentSlide = floor2Roll.getCurrentSlide();
+
+                if (currentSlide === 1) {
+                    $('.arrow-prev').hide();
+                    $('.arrow-next').show();
+                    $('.circle-logo').removeClass('on');
+                    $('.js-disc2').find('.detail').removeClass('self');
+                } else if (currentSlide === 4) {
+                    $('.arrow-next').hide();
+                    $('.arrow-prev').show();
+                    $('.circle-logo').addClass('on');
+                    $('.js-disc2').find('.detail').addClass('self');
+                    // $('.detail-tit').css('marginTop', '14px');
+                } else {
+                    $('.arrow-next, .arrow-prev').show();
+                    $('.circle-logo').removeClass('on');
+                    // $('.detail-tit').css('marginTop', '0');
+                    $('.js-disc2').find('.detail').removeClass('self');
+                }
+            }
+        });
+
+        // 3층 롤링 배너
+        var floor3Roll = $('.js-rolling3').bxSlider({
+            pagerCustom: '.js-pager3',
+            nextSelector: '.arrow-next3',
+            prevSelector: '.arrow-prev3',
+            onSlideBefore: function ($elem, oldIdx, newIdx) {
+                var currentSlide = floor3Roll.getCurrentSlide();
+
+                if (currentSlide === 1) {
+                    $('.arrow-prev3').hide();
+                    $('.arrow-next3').show();
+                } else if (currentSlide === 2) {
+                    $('.arrow-next3').hide();
+                    $('.arrow-prev3').show();
+                } else {
+                    $('.arrow-next3, .arrow-prev3').show();
+                }
+            }
+        });
+
+        // 4층 롤링 배너
+        var floor4Roll = $('.js-rolling4').bxSlider({
+            pagerCustom: '.js-pager4',
+            controls: false
+        });
+
+        // 섹션 소개 페이지 롤링후 제목과 텍스트 변경
+        function detailImgChange(titName, txtName, imgName) {
+            $(titName).attr('src', './images/tit-pop-' + imgName + '.png');
+            $(txtName).attr('src', './images/txt-pop-' + imgName + '.png');
+        }
+
+        // 2층전개도 버튼 클릭시 해당페이지로 이동
+        function goPage2(selector, pagerName, discName) {
+            var locName = $(selector).data('locname');
+            var index = $(selector).index();
+
+            detailImgChange('.js-floor2-disc-tit', '.js-floor2-disc-txt', locName);
+
+            floor2Roll.goToSlide(index + 1);
+
+            $(pagerName).addClass('on');
+            $(discName).addClass('on');
+        }
+
+        // 3층전개도 버튼 클릭시 해당페이지로 이동
+        function goPage3(selector, pagerName, discName) {
+            var locName = $(selector).data('locname');
+            var index = $(selector).index();
+            var pageNum;
+
+            detailImgChange('.js-floor3-disc-tit', '.js-floor3-disc-txt', locName);
+
+            switch (index) {
+                case 2:
+                case 3:
+                    index = 0;
+                    break;
+            }
+            floor3Roll.goToSlide(index + 1);
+
+            $(pagerName).addClass('on');
+            $(discName).addClass('on');
+        }
+
+        // 4층전개도 버튼 클릭시 해당페이지로 이동
+        function goPage4(selector, pagerName, discName) {
+            var locName = $(selector).data('locname');
+            var index = $(selector).index();
+            var pageNum;
+
+            floor4Roll.goToSlide(index + 1);
+
+            $(pagerName).addClass('on');
+            $(discName).addClass('on');
+        }
+
+        // 뒤로 가기 버튼 클릭시  페이저와 상세보기 창 닫기
+        function goBack(pagerName, discName) {
+            $(pagerName).removeClass('on');
+            $(discName).removeClass('on');
+        }
+
+
+        // 이전, 다음 버튼 클릭시 상세 설명 제목, 텍스트 변경
+        $('.arrow-next2, .arrow-prev2').on('click', function () {
+            var current = floor2Roll.getCurrentSlide();
+            var name;
+            switch (current) {
+                case 1:
+                    name = 'welcoming';
+                    break;
+                case 2:
+                    name = 'menu';
+                    break;
+                case 3:
+                    name = 'video';
+                    break;
+                case 4:
+                    name = 'self';
+                    break;
+            }
+            detailImgChange('.js-floor2-disc-tit', '.js-floor2-disc-txt', name);
+        });
+
+        $('.arrow-next3, .arrow-prev3').on('click', function () {
+            var current = floor3Roll.getCurrentSlide();
+            var name;
+            console.log(current);
+            switch (current) {
+                case 1:
+                    name = 'tiny';
+                    break;
+                case 2:
+                    name = 'community';
+                    break;
+            }
+            detailImgChange('.js-floor3-disc-tit', '.js-floor3-disc-txt', name);
+        });
+        // console.log(location.hash);
+
+        $('.wrap').fullpage({
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
+            menu: '#lnb',
+            scrollBar: true,
+            resize: true,
+            onLeave: function (index, nextIndex, direction) {
+                //popup  가리리
+                $('.js-dim').removeClass('on');
+                $('.comingSoon-wrap').removeClass('on');
+                floor2Roll.goToSlide(0);
+                floor3Roll.goToSlide(0);
+                floor4Roll.goToSlide(0);
+                goBack('.js-pager4', '.js-disc4');
+                goBack('.js-pager3', '.js-disc3');
+                goBack('.js-pager2', '.js-disc2');
+            },
+            afterLoad: function (anchor) {
+                var winH = window.innerHeight;
+
+                if (anchor === '4thpage') {
+                    $('.lnb-item').addClass('on').find('.lnb-txt').show();
+                    $('.lnb-txt').each(function (idx) {
+                        $(this).find('img').attr('src', '/Images/itaewon/nav-floor' + idx + '-txt.png');
+                    });
+                } // if
+            } // fn
+        });
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* v2.0 | 20110126 http://meyerweb.com/eric/tools/css/reset/ License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+/********************* 	common ********************/
+.screen-out { position: absolute; top: -9999em; text-indent: -9999em; }
+
+.mDim { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: 0.6; filter: alpha(opacity=60); z-index: 10; display: none; }
+.mDim.on { display: block; }
+
+	/**********
+	header
+***********/
+.mHeader { text-align: center; padding: 32px 0 34px; background: #eadcc2; position: relative; }
+.mHeader .mLogo { display: inline-block; }
+.mHeader-toggle { background: transparent url("../images/m/toggle.png") no-repeat 0 top; display: block; width: 50px; height: 43px; position: absolute; top: 37px; right: 22px; text-indent: -9999em; }
+.mHeader-toggle.on { background-position: 0 bottom; }
+
+.mWrap { outline: 1px dashed red; width: 640px; margin: 0 auto; overflow: hidden; position: relative; }
+
+/**********
+	nav
+***********/
+.mNav { position: absolute; top: 0; right: -400px; height: 100%; background: #f6f1e6; z-index: 100; }
+.mNav-item { background: transparent url("../images/m/nav-bottom-line.png") no-repeat center top; }
+.mNav-item:first-child { background: none; }
+.mNav-link { background: transparent url("../images/m/nav-img-ir.png") no-repeat center 50px; display: block; width: 400px; margin-left: auto; margin-right: auto; text-indent: -99999em; }
+.mNav-itaewon { height: 147px; padding-top: 50px; padding-bottom: 19px; }
+.mNav-menu { height: 149px; padding-top: 29px; padding-bottom: 19px; background-position: center -169px; }
+.mNav-event { height: 140px; padding-top: 38px; padding-bottom: 19px; background-position: center -369px; }
+.mNav-ambassador { height: 136px; padding-top: 41px; background-position: center -568px; }
+
+/******************************* menu ******************************/
+.menu-wrap { width: 600px; margin: 0 auto; padding-bottom: 80px; }
+
+/* index */
+.menu-tit { text-align: center; margin-top: 49px; }
+
+/* index - menu list */
+.menu-list { overflow: hidden; margin-top: 19px; }
+.menu-list-wrap { position: relative; display: none; }
+.menu-list-wrap.on { display: block; }
+.menu-list__item { float: left; margin-top: 10px; }
+.menu-list__item:nth-child(2n) { margin-left: 10px; }
+.menu-list__close { background: transparent url("../images/menu/m/btn-close.png") no-repeat center top; width: 107px; height: 30px; position: absolute; bottom: 0; right: 10px; border: none; cursor: pointer; }
+
+/* index - menu contents */
+.menu-contents { margin-top: 27px; padding-bottom: 27px; overflow: hidden; }
+.menu-contents__link { display: block; }
+.menu-contents__link:nth-child(2), .menu-contents__link:last-child { margin-top: 8px; }
+.menu-contents__link:nth-child(2) { float: left; }
+.menu-contents__link:last-child { float: right; }
+
+/* subpage - location*/
+.loc { outline: 1px dashed red; }
+.loc * { vertical-align: top; }
+.loc__btn { display: inline-block; margin-top: 30px; margin-left: 10px; }
+.loc__bg { background: transparent url("../images/menu/m/bg-location.png") no-repeat center top; display: inline-block; width: 30px; height: 30px; }
+.loc__bg__arrow { background: transparent url("../images/menu/m/arrow-location.png") no-repeat center top; display: inline-block; width: 16px; height: 11px; margin-left: 7px; margin-top: 11px; -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); -webkit-transition: -webkit-transform 0.5s; transition: transform 0.5s; }
+.loc__bg__arrow.on { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); }
+.loc__txt { margin-top: 4px; margin-left: 19px; }
+
+/* menu sub title */
+.menu-subTit { margin-top: 30px; }
+
+/* menu con list */
+.menu-con-list { outline: 1px dashed red; overflow: hidden; width: 540px; margin: 0 auto; }
+.menu-con-list__item { float: left; margin-top: 17px; width: 270px; height: 307px; border-bottom: 1px solid #ddd; }
+
+/* menu caution */
+.menu-caution { background: transparent url("../images/menu/m/menu-caution-drink.png") no-repeat center top; width: 440px; height: 104px; text-indent: -9999em; overflow: hidden; margin-left: 30px; margin-top: 40px; }
+
+/******************************* menu popup ******************************/
+.menu-pop { outline: 1px dashed blue; position: absolute; top: 110px; left: 0; padding: 49px 20px 29px; background: #fff; display: none; }
+.menu-pop.on { display: block; }
+.menu-pop__tit { margin-left: 20px; }
+.menu-pop__pic { outline: 1px dashed orange; margin: 16px auto 0; overflow: hidden; width: 540px; }
+.menu-pop__pic--left { float: left; border: 1px solid #e1e1e1; }
+.menu-pop__pic--right { float: right; }
+.menu-pop__pic__thumb { margin-top: 10px; width: 123px; height: 123px; border: 1px solid #ddd; }
+.menu-pop__pic__thumb:first-child { margin-top: 0; }
+.menu-pop__pic__link { display: block; }
+.menu-pop__disc { background: transparent url("../images/menu/popup/mDisc-nescafe-original.png") no-repeat center top; width: 600px; height: 230px; overflow: hidden; margin-top: 28px; text-indent: -9999em; }
+.menu-pop__caution { background: transparent url("../images/menu/popup/mCaution-drink.png") no-repeat center top; overflow: hidden; width: 495px; height: 74px; margin-top: 18px; margin-left: 15px; text-indent: -9999em; }
+.menu-pop__close { background: transparent url("../images/menu/popup/mClose.png") no-repeat center top; width: 40px; height: 40px; position: absolute; top: 20px; right: 20px; border: none; }
+
+/* dolce gusto */
+.dolcegusto-txt-area { background: transparent url("../images/menu/m/bg-dolce.png") no-repeat center 25px; padding-top: 393px; margin-top: 20px; text-align: center; }
+.dolcegusto-txt-area__txt { margin-top: 29px; }
+
+/* kitkat */
+.menu-subTit--kitkat { margin-top: 23px; }
+
+/*beverage*/
+.menu-subTit--beverage { margin-top: 18px; }
+
+/*tea*/
+.menu-subTit--tea { margin-top: 16px; }
+
+/*# sourceMappingURL=menuM.css.map */

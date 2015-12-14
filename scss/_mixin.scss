@@ -1,0 +1,16 @@
+@mixin debug($color:red){
+	outline: 1px dashed $color;
+}
+
+@mixin background($name, $type, $repeat: no-repeat, $x: center, $y: top, $color:transparent){
+	background: $color url($location-local + $name + '.' + $type) $repeat $x $y;
+}
+
+@mixin backgroundM($name, $type, $repeat: no-repeat, $x: center, $y: top, $color:transparent){
+	background: $color url($location-localM + $name + '.' + $type) $repeat $x $y;
+}
+
+
+@function response($val, $size:915px){
+	@return ($val / $size * 100%);
+}

@@ -1,0 +1,543 @@
+@charset "UTF-8";
+/* v2.0 | 20110126 http://meyerweb.com/eric/tools/css/reset/ License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+.gnb-inner { *zoom: 1; }
+.gnb-inner:after { content: ''; display: table; clear: both; }
+
+.section-detail__back, .detail__btn, .pop .close, .event-pop .close, .comingSoon-btn, .takePic__btn, .userInfo__btn { display: inline-block; border: none; cursor: pointer; }
+
+/********************* 	common ********************/
+.screen-out { position: absolute; top: -9999em; text-indent: -9999em; }
+
+.off { display: none; }
+
+html, body, .wrap, .section { height: 100%; }
+
+.section, .wrap-inner { min-width: 1000px; max-height: 1420px; }
+
+.bx-wrapper { height: 100%; }
+
+.bx-viewport { height: 100%; }
+
+ /*********************
+	wrap
+ ********************/
+.container { position: relative; }
+
+.wrap { margin: 0 auto; padding-bottom: 65px; min-width: 1000px; max-width: 3000px; }
+.wrap-inner { width: 1000px; max-height: 1420px; margin: 0 auto; position: relative; z-index: 1; }
+
+ /*********************
+		section comming
+ ********************/
+.section { position: relative; overflow: hidden; }
+.section-bg { width: 100%; height: 100%; position: absolute; }
+.section-tit { margin-left: 71px; padding-top: 193px; }
+.section .extend-disc { position: absolute; }
+
+ /*********************
+	linker
+ ********************/
+.linker { position: absolute; top: 30px; left: 50%; margin-left: -25px; z-index: 1; }
+
+ /*********************
+	intro
+ ********************/
+.intro { width: 500px; height: 290px; position: absolute; top: 50%; left: 50%; margin-top: -145px; margin-left: -250px; }
+.intro__images { position: relative; }
+.intro__images .img { display: none; }
+.intro__images img { position: absolute; top: 0; left: 50%; margin-left: -100px; display: none; }
+.intro__images img:first-child { display: block; }
+.intro-after { position: absolute; top: 50%; left: 50%; margin-top: -31.5px; margin-left: -106.5px; display: none; }
+
+ /*********************
+	logo,	gnb
+ ********************/
+.gnb { position: fixed; bottom: 0; height: 52px; width: 100%; padding-top: 13px; background: #eadcc2; z-index: 10; }
+.gnb-inner { min-width: 1000px; max-width: 3000px; padding: 0 70px 0 30px; margin: 0 auto; }
+.gnb-list { float: right; margin-top: 6px; }
+.gnb-item { float: left; margin-left: 70px; }
+.gnb-item:first-child { margin-left: 0; }
+
+.logo { float: left; }
+
+/*********************
+	lnb
+*********************/
+.lnb { background: transparent url("../images/lnb-bg.png") no-repeat center top; position: fixed; height: 406px; width: 90px; top: 50%; margin-top: -251px; right: 30px; z-index: 10; }
+.lnb-item { position: relative; }
+.lnb-item.active .lnb-btn--lv2, .lnb-item.on .lnb-btn--lv2 { background-position: -87px bottom; }
+.lnb-item.active .lnb-btn--lv3, .lnb-item.on .lnb-btn--lv3 { background-position: -87px center; }
+.lnb-item.active .lnb-btn--lv4, .lnb-item.on .lnb-btn--lv4 { background-position: -87px top; }
+.lnb-txt { position: absolute; top: 50%; margin-top: -21.5px; display: none; }
+.lnb-txt--lv2 { left: -130px; }
+.lnb-txt--lv3 { left: -72px; }
+.lnb-txt--lv4 { left: -82px; }
+.lnb-btn { background: transparent url("../images/lnb-ir.png") no-repeat 3px top; display: block; height: 86px; margin-top: 20px; }
+.lnb-btn--lv2 { background-position: 3px bottom; }
+.lnb-btn--lv3 { background-position: 3px center; }
+.lnb-btn--lv4 { margin-top: 40px; }
+
+/*********************
+	floor 1
+*********************/
+.floor1 .linker { top: 3.27869%; }
+.floor1__txt-area { padding-top: 100px; text-align: center; }
+.floor1 .countDown { margin-top: 19px; }
+.floor1 .countDown-txt { background: transparent url("../images/dday-txt.png") no-repeat center top; width: 48px; height: 48px; display: inline-block; }
+.floor1 .countDown-num { display: inline-block; vertical-align: top; }
+.floor1 .visual { background: transparent url("../images/floor1-visual.png") no-repeat 0 273px; position: absolute; top: 30px; left: -430px; width: 490px; height: 610px; }
+.floor1 .visual .roll-wrap { position: absolute; width: 382px; height: 382px; right: 0; top: 0; }
+.floor1 .visual-img { width: 189px; height: 241px; position: absolute; z-index: 100; top: 273px; left: 0; }
+.floor1 .visual-video { position: absolute; z-index: 100; bottom: 0; left: 192px; }
+
+/*********************
+	floor 2, 3, 4 공통
+*********************/
+.floor2__extend { background: transparent url("../images/floor2-extend.png") no-repeat center top; position: relative; width: 1000px; height: 684px; margin-top: 140px; }
+
+.floor3__extend { background: transparent url("../images/floor3-extend.png") no-repeat center top; position: relative; width: 1000px; height: 684px; margin-top: 140px; }
+
+.floor4__extend { background: transparent url("../images/floor4-extend.png") no-repeat center top; position: relative; width: 1000px; height: 684px; margin-top: 140px; }
+
+/*********************
+	각층별 롤링 공통
+*********************/
+.extending .wrap-inner { position: absolute; top: 0; left: 50%; margin-left: -500px; max-height: 1420px; }
+
+.section-detail { position: absolute; top: 30px; left: 30px; z-index: 10; width: 215px; display: none; }
+.section-detail.on { display: block; }
+.section-detail__back { background: transparent url("../images/btn-back.png") no-repeat center top; width: 197px; height: 156px; }
+.section-detail__item { height: 18px; margin-top: 13px; }
+.section-detail__item:first-child { margin-top: 0; }
+.section-detail__link { display: block; height: 100%; }
+
+.rolling__bg { width: 100%; height: 100%; }
+
+.rolling { height: 100%; }
+.rolling .bx-wrapper { height: 100%; }
+.rolling-list { height: 100%; }
+.rolling__item { height: 100%; }
+
+.detail { background: transparent url("../images/bg-popDetail.png") no-repeat center top; width: 532px; height: 397px; top: 50%; left: 50%; margin-top: -262px; margin-left: -266px; padding-top: 126px; text-align: center; position: absolute; }
+.detail .circle-logo { display: none; }
+.detail .circle-logo.on { display: block; margin-top: 47px; }
+.detail-wrap { display: none; }
+.detail-wrap.on { display: block; }
+.detail__txt { margin-top: 21px; }
+.detail__btn { margin-top: 17px; }
+.detail-tit { margin-top: 0; }
+.detail.self { height: 524px; padding-top: 0; }
+.detail.self .detail-tit { margin-top: 12px; }
+.detail.self .detail__txt { margin-top: 12px; }
+.detail.self .detail__btn { margin-top: 9px; }
+
+.arrow { display: block; width: 33px; height: 54px; position: absolute; top: 50%; margin-top: -27px; }
+.arrow-prev { left: -56px; }
+.arrow-next { right: -54px; }
+.arrow .bx-prev { background: transparent url("../images/arrow.png") no-repeat 0 top; display: block; text-indent: -9999em; height: 100%; }
+.arrow .bx-next { background: transparent url("../images/arrow.png") no-repeat right top; display: block; text-indent: -9999em; height: 100%; }
+
+/*********************
+	floor 2
+*********************/
+.floor2 .disc { position: absolute; }
+.floor2 .disc-welcoming { top: 122px; left: 504px; }
+.floor2 .disc-menu { top: 279px; left: 265px; }
+.floor2 .disc-video { top: 291px; left: 537px; }
+.floor2 .disc-self { top: 114px; left: 367px; }
+.floor2 .link-welcome { background: transparent url("../images/pop-nav-floor2.png") no-repeat 3px top; }
+.floor2 .link-welcome.active { background-position: -217px 0; }
+.floor2 .link-menu { background: transparent url("../images/pop-nav-floor2.png") no-repeat 3px -29px; }
+.floor2 .link-menu.active { background-position: -217px -29px; }
+.floor2 .link-video { background: transparent url("../images/pop-nav-floor2.png") no-repeat 3px -90px; }
+.floor2 .link-video.active { background-position: -217px -90px; }
+.floor2 .link-self { background: transparent url("../images/pop-nav-floor2.png") no-repeat 3px -60px; }
+.floor2 .link-self.active { background-position: -217px -60px; }
+
+/*********************
+	floor 3
+*********************/
+.floor3__extend { height: 641px; }
+.floor3 .disc { position: absolute; }
+.floor3 .disc-tiny1 { top: 390px; left: 436px; }
+.floor3 .disc-community { top: 0; left: 453px; }
+.floor3 .link-tiny { background: transparent url("../images/pop-nav-floor3.png") no-repeat 0 top; width: 135px; }
+.floor3 .link-tiny.active { background-position: -180px top; }
+.floor3 .link-community { background: transparent url("../images/pop-nav-floor3.png") no-repeat 0 bottom; width: 179px; }
+.floor3 .link-community.active { background-position: -180px bottom; }
+.floor3 .rolling__item--two { background: transparent url("../images/bg_test_01.jpg") no-repeat center 50%; }
+.floor3 .rolling__item--last { background: transparent url("../images/bg_test_02.jpg") no-repeat center 50%; }
+
+/*********************
+	floor 4
+*********************/
+.floor4__extend { height: 666px; }
+.floor4 .disc-led { position: absolute; top: 170px; left: 501px; }
+.floor4 .link-led { background: transparent url("../images/pop-nav-floor4.png") no-repeat 0 top; width: 111px; }
+.floor4 .link-led.active { background-position: -113px top; }
+.floor4 .rolling__item--last { background: transparent url("../images/floor-led.png") no-repeat center 50%; }
+
+/********************* popup 공통 ********************/
+.dim { background: #000; opacity: 0.6; filter: alpha(opacity=60); position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; display: none; }
+.dim.on { display: block; }
+
+.pop, .event-pop { position: absolute; left: 50%; display: none; z-index: 10; }
+.pop.on, .on.event-pop { display: block; }
+.pop .close, .event-pop .close { background: transparent url("../images/btn-close.png") no-repeat center top; width: 46px; height: 47px; position: absolute; }
+
+/********************* comming soon ********************/
+.comingSoon { background: transparent url("../images/bg-comingsoon.png") no-repeat center top; width: 538px; height: 529px; top: 50%; left: 50%; position: absolute; margin-left: -266px; margin-top: -264.5px; z-index: 100; }
+.comingSoon-wrap { position: fixed; top: 0; left: 0; width: 100%; z-index: 10; display: none; }
+.comingSoon-wrap.on { display: block; }
+.comingSoon .close { right: 9px; top: 37px; }
+.comingSoon-txt { margin-top: 130px; margin-left: 160px; }
+.comingSoon-btn { background: transparent url("../images/btn-comingsoon.png") no-repeat center top; width: 156px; height: 43px; margin: 76px auto 0; display: block; }
+
+/******************************************
+							animation content
+******************************************/
+/*********************
+	밤,낮 배경
+*********************/
+.day { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+.day-date { background: #8dbfc5; z-index: 1; }
+.day-night { background: #4d4842; z-index: 0; }
+
+/*********************
+	밤하늘
+*********************/
+.light-bg { background: transparent url("../images/light-frame.png") no-repeat center top; position: absolute; width: 820px; height: 320px; top: -300px; left: 50%; margin-left: -410px; background-position: 0 0; }
+
+/*********************
+	animation (모션 영역 : 사람 )
+*********************/
+.animation { width: 610px; height: 386px; position: absolute; bottom: 0; left: 50%; margin-left: -305px; }
+
+/*********************
+	building
+*********************/
+.building { background: transparent url("../images/building.png") no-repeat center top; width: 610px; height: 386px; position: absolute; top: 0; left: 0; z-index: 10; }
+
+/********************* 	roof ********************/
+.roof { position: absolute; height: 83px; width: 594px; top: -10px; left: 8px; z-index: 1; }
+
+/********************* 	street ********************/
+.street { position: relative; height: 93px; top: 295px; width: 100%; z-index: 10; }
+
+.human { display: inline-block; position: absolute; }
+.human-roof1 { background: transparent url("../images/roof-human1.png") no-repeat 0 0; width: 27px; height: 79px; left: 165px; }
+.human-roof2 { background: transparent url("../images/roof-human2.png") no-repeat 0 0; width: 39px; height: 81px; left: 196px; }
+.human-roof3 { background: transparent url("../images/roof-human3.png") no-repeat 0 0; width: 40px; height: 83px; left: 383px; }
+.human-roof4 { background: transparent url("../images/roof-human4.png") no-repeat 0 0; width: 39px; height: 80px; left: 428px; }
+.human-street1 { background: transparent url("../images/street-human1.png") no-repeat 0 0; width: 44px; height: 93px; bottom: 0; z-index: 10; left: -38px; }
+.human-street2 { background: transparent url("../images/street-human2.png") no-repeat 0 0; width: 37px; height: 91px; bottom: 0; z-index: 10; left: 21px; }
+.human-street3 { background: transparent url("../images/street-human3.png") no-repeat 0 0; width: 35px; height: 90px; bottom: 0; z-index: 10; left: 322px; }
+.human-street4 { background: transparent url("../images/street-human4.png") no-repeat 0 0; width: 43px; height: 90px; bottom: 0; z-index: 10; left: 447px; }
+.human-street5 { background: transparent url("../images/street-human5.png") no-repeat 0 0; width: 120px; height: 88px; bottom: 0; z-index: 10; left: 37px; }
+
+@media screen and (max-width: 1100px) { .gnb-inner { padding-left: 10px; }
+  .gnb-list { margin-right: 35px; }
+  .gnb-item { margin-left: 30px; }
+  .lnb { right: 10px; } }
+/*****************************************
+	small page height: 650 ~ 780px
+*****************************************/
+.small .floor0__extend, .small .floor1__extend, .small .floor2__extend, .small .floor3__extend, .small .floor4__extend { width: 750px; height: 513px; margin-top: 55px; margin-left: 125px; }
+
+.small .floor0__extend { background: transparent url("../images/floor0-extend-s.png") no-repeat center top; }
+.small .floor1__extend { background: transparent url("../images/floor1-extend-s.png") no-repeat center top; }
+.small .floor2__extend { background: transparent url("../images/floor2-extend-s.png") no-repeat center top; }
+.small .floor3__extend { background: transparent url("../images/floor3-extend-s.png") no-repeat center top; }
+.small .floor4__extend { background: transparent url("../images/floor4-extend-s.png") no-repeat center top; }
+.small .floor1__txt-area { padding-top: 83px; }
+.small .floor2__extend .disc-menu { top: 213px; left: 205px; }
+.small .floor2__extend .disc-self { top: 63px; left: 275px; }
+.small .floor2__extend .disc-welcoming { top: 117px; left: 385px; }
+.small .floor2__extend .disc-video { top: 239px; left: 440px; }
+.small .floor3__extend .disc-tiny1 { top: 287px; left: 318px; }
+.small .floor3__extend .disc-community { top: 20px; left: 335px; }
+.small .floor4__extend .disc-led { top: 117px; left: 372px; }
+.small .countDown { margin-top: 10px; }
+.small .visual { background: transparent url("../images/floor1-visual-s.png") no-repeat 0 153px; width: 395px; height: 490px; }
+.small .visual .roll-wrap { width: 306px; height: 306px; }
+.small .visual-video { left: 153px; }
+.small .human-roof1, .small .human-roof2, .small .human-roof4, .small .human-street1, .small .human-street2 { display: none; }
+
+/************* animation 650 *********************/
+.animation-s { position: absolute; width: 412px; height: 268px; bottom: 0; left: 50%; margin-left: -206px; }
+
+.light-bg-s { background: transparent url("../images/light-frame-s.png") no-repeat left top; position: absolute; width: 574px; height: 224px; top: -205px; left: 50%; margin-left: -287px; background-position: 0 0; }
+
+.building-s { background: transparent url("../images/building-s.png") no-repeat center top; width: 412px; height: 268px; position: absolute; top: 0; left: 0; z-index: 10; }
+
+.roof-s { width: 396px; position: absolute; height: 60px; top: 0; left: 8px; z-index: 1; }
+
+.human-roof3-s { background: transparent url("../images/roof-human3-s.png") no-repeat 0 top; width: 28px; height: 60px; top: 8px; left: 251px; }
+
+.human-street3-s { background: transparent url("../images/street-human3-s.png") no-repeat 0 top; width: 23px; height: 60px; bottom: 0; z-index: 10; left: 400px; }
+
+.human-street4-s { background: transparent url("../images/street-human4-s.png") no-repeat 0 top; width: 29px; height: 60px; bottom: 0; z-index: 10; left: 447px; }
+
+.human-street5-s { background: transparent url("../images/street-human5-s.png") no-repeat 0 top; width: 80px; height: 60px; bottom: 0; z-index: 10; left: 20px; }
+
+/*********************** nescafe itaewon **************************/
+.wrap-nescafe { padding-bottom: 0; }
+
+.wrap-inner-nescafe { padding-top: 69px; overflow: hidden; position: absolute; bottom: 130px; left: 50%; margin-left: -500px; }
+
+.section-nescafe { background: #000; min-height: 100%; position: relative; }
+
+.nescafe-visual { background: transparent url("../images/bg-nescafe.png") no-repeat center top; float: left; width: 500px; height: 753px; position: relative; }
+.nescafe-visual__btn { position: absolute; top: 537px; left: 282px; }
+
+.nescafe-text { margin-left: 500px; text-align: center; padding-top: 59px; }
+
+.nescafe-date { margin-top: 40px; }
+
+.nescafe-tit { margin-top: 37px; }
+
+/* small height 650 ~ 780px 일때 */
+.small .wrap-inner-nescafe { height: 501px; bottom: 106px; overflow: visible; padding-top: 0; }
+.small .nescafe-visual { background: transparent url("../images/bg-nescafe-s.png") no-repeat center top; height: 501px; width: 522px; }
+.small .nescafe-visual__btn { top: 327px; left: 350px; }
+.small .nescafe-text { padding-top: 31px; margin-left: 522px; }
+.small .nescafe-date { margin-top: 23px; }
+.small .nescafe-tit { margin-top: 17px; }
+
+/*********************** evnet **************************/
+.event-wrap { min-width: 1000px; max-width: 2000px; text-align: center; padding-bottom: 65px; }
+
+/* event visual */
+.event-visual { background: transparent url("../images/event/event-visual-bg.png") no-repeat center top; height: 684px; }
+.event-visual .wrap-inner { padding-top: 117px; }
+.event-visual__tit { margin-top: 35px; }
+.event-visual__go-event { display: inline-block; margin-top: 101px; }
+
+/* 이벤트 날짜 */
+.event__date { background: transparent url("../images/event/event1-date.png") no-repeat center top; height: 21px; width: 530px; text-indent: -9999em; margin: 22px auto 0; }
+
+/* 인스타그램 */
+.instargram { width: 925px; margin: 16px auto 0; position: relative; }
+.instargram:after { content: ''; display: table; clear: both; }
+.instargram__link { background: transparent url("../images/event/bg.png") no-repeat center top; display: block; position: relative; float: left; overflow: hidden; top: 0; left: 0; width: 185px; height: 185px; }
+.instargram__link-round { display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.instargram__link-round--1 { background: transparent url("../images/event/round1.png") no-repeat center top; }
+.instargram__link-round--2 { background: transparent url("../images/event/round2.png") no-repeat center top; }
+.instargram__link-round--3 { background: transparent url("../images/event/round3.png") no-repeat center top; }
+.instargram__link-round--4 { background: transparent url("../images/event/round4.png") no-repeat center top; }
+.instargram__link-round--5 { background: transparent url("../images/event/round5.png") no-repeat center top; }
+.instargram__link-round--6 { background: transparent url("../images/event/round6.png") no-repeat center top; }
+.instargram__link-round--7 { background: transparent url("../images/event/round7.png") no-repeat center top; }
+.instargram__link-round--8 { background: transparent url("../images/event/round8.png") no-repeat center top; }
+.instargram__link-round--9 { background: transparent url("../images/event/round9.png") no-repeat center top; }
+.instargram__link-round--10 { background: transparent url("../images/event/round10.png") no-repeat center top; }
+.instargram__link-round--11 { background: transparent url("../images/event/round11.png") no-repeat center top; }
+.instargram__link-round--12 { background: transparent url("../images/event/round12.png") no-repeat center top; }
+.instargram__link img { width: 100%; }
+.instargram__arrow { background: transparent url("../images/event/arrow.png") no-repeat 0 top; width: 68px; height: 67px; display: block; position: absolute; top: 50%; margin-top: -33.5px; }
+.instargram__arrow--prev { left: -85px; }
+.instargram__arrow--next { background-position: right top; right: -85px; }
+
+/* 버튼 영역 */
+.event-btn-wrap { margin-top: 25px; }
+.event-btn-wrap .event-btn { background: transparent url("../images/event/event-btns.png") no-repeat left top; display: inline-block; width: 280px; height: 83px; margin-left: 20px; }
+.event-btn-wrap .event-btn:first-child { margin-left: 0; }
+.event-btn-wrap .event-btn__gift { background-position: right top; }
+.event-btn-wrap .event-btn__rumor { background-position: left -123px; }
+
+/* event 1 red accent */
+.event-accent { background: transparent url("../images/event/event1-bg.png") no-repeat center top; height: 1231px; }
+.event-accent .wrap-inner { padding-top: 61px; }
+.event-accent__tip { margin-top: 42px; }
+
+/* event 2 digital playground */
+.event-playground { background: transparent url("../images/event/event2-bg.png") no-repeat center top; height: 1496px; }
+.event-playground .wrap-inner { padding-top: 64px; }
+.event-playground__txt { margin-top: 25px; }
+.event-playground__about { background: transparent url("../images/event/event2-about.png") no-repeat center top; width: 921px; height: 517px; margin: 42px auto; text-indent: -99999em; }
+.event-playground__about .about-detail { background: transparent url("../images/event/event-btns.png") no-repeat left -246px; width: 159px; height: 42px; display: block; margin-top: 198px; margin-left: 45px; }
+.event-playground__join-way { margin: 25px auto 0; width: 909px; }
+.event-playground__join-way__txt { background: transparent url("../images/event/event2-join-img.png") no-repeat center top; height: 347px; margin-top: 19px; }
+
+/* application download */
+.application { background: transparent url("../images/event/application-bg.png") no-repeat center top; height: 233px; }
+.application .wrap-inner { text-align: left; padding-top: 48px; }
+.application__tit, .application__txt { margin-left: 344px; }
+.application__txt { margin-top: 19px; }
+
+/* 이벤트 유의사항 */
+.event-caution { background: #2a2827; padding-bottom: 50px; }
+.event-caution .wrap-inner { text-align: left; padding-top: 35px; }
+.event-caution__list { margin-left: 40px; }
+.event-caution__txt { background: transparent url("../images/event/event-caution-txt.png") no-repeat center top; width: 808px; height: 174px; margin-top: 18px; }
+
+/* event popup */
+.event-pop { padding-top: 43px; }
+.event-pop .close { background: transparent url("../images/event/popup/close.png") no-repeat center top; width: 50px; height: 50px; top: -60px; right: -50px; }
+
+/* sns */
+.event-sns { background: transparent url("../images/event/popup/sns-outBg.png") no-repeat center top; text-align: center; width: 640px; height: 501px; top: 150px; margin-left: -320px; }
+.event-sns__body { background: transparent url("../images/event/popup/sns-innerBg.png") no-repeat center top; width: 553px; height: 294px; margin: 23px auto 0; padding-top: 41px; }
+.event-sns__list { overflow: hidden; margin: 40px auto 0; width: 477px; }
+.event-sns li { float: left; }
+.event-sns__item--instar { margin-left: 20px; }
+.event-sns__item--kakao { margin-left: 22px; }
+.event-sns__item--blog { margin-left: 19px; }
+.event-sns__link { background: transparent url("../images/event/popup/sns-ir.png") no-repeat 0 top; display: block; height: 120px; }
+.event-sns__link--facebook { width: 104px; }
+.event-sns__link--instar { width: 103px; background-position: -122px 0; }
+.event-sns__link--kakao { width: 106px; background-position: -250px 0; }
+.event-sns__link--blog { width: 102px; background-position: -375px 0; }
+
+/* gift */
+.event-gift { background: transparent url("../images/event/popup/gift-outBg.png") no-repeat center top; width: 900px; height: 791px; top: 150px; margin-left: -450px; text-align: center; }
+.event-gift .gift-content { width: 811px; height: 264px; margin: 9px auto 0; text-indent: -9999em; }
+.event-gift .gift-content--accent { background: transparent url("../images/event/popup/gift-1.png") no-repeat center top; margin-top: 19px; }
+.event-gift .gift-content--digital { background: transparent url("../images/event/popup/gift-2.png") no-repeat center top; }
+.event-gift .gift-caution { background: transparent url("../images/event/popup/gift-caution.png") no-repeat center top; width: 640px; height: 80px; text-indent: -9999em; margin-left: 52px; margin-top: 19px; }
+.event-gift.gift-top { top: 810px; }
+.event-gift.gift-bottom { top: 2312px; }
+
+/* 인증샷 */
+.takePic { background: transparent url("../images/event/popup/takePic-bg.png") no-repeat center top; width: 640px; height: 714px; top: 810px; margin-left: -320px; text-align: center; }
+.takePic__txt { margin-top: 14px; }
+.takePic__form-inner { background: transparent url("../images/event/popup/takePic-inner-bg.png") no-repeat center top; width: 492px; height: 257px; margin: 27px auto 0; text-align: left; padding: 29px 30px 38px 29px; }
+.takePic__form-tit { background: transparent url("../images/event/popup/takePic-label.png") no-repeat 0 top; display: inline-block; height: 25px; width: 125px; }
+.takePic__input-wrap { margin-top: 14px; }
+.takePic__input-wrap--instargram { margin-top: 25px; }
+.takePic__label { display: inline-block; background: transparent url("../images/event/popup/takePic-label.png") no-repeat 0 -40px; width: 63px; height: 50px; vertical-align: top; }
+.takePic__label--phone { background-position: 0 -85px; }
+.takePic__label--instargram { display: block; width: 107px; height: 20px; background-position: 0 -151px; }
+.takePic__input-bg { background: transparent url("../images/event/popup/takePic-input-bg.png") no-repeat 0 top; display: inline-block; width: 428px; height: 50px; vertical-align: top; margin-left: -5px; }
+.takePic__input-bg--phone { background-position: 0 -63px; }
+.takePic__input-bg--instargram { margin-left: 0; width: 490px; margin-top: 8px; background-position: 0 -167px; }
+.takePic__input-bg--instargram input { width: 465px; }
+.takePic__input-bg input { border: none; font-size: 17px; margin: 12px 0 0 10px; }
+.takePic__agree { text-align: left; position: relative; height: 47px; margin-top: 10px; margin-left: 75px; }
+.takePic__agree .takePicAgree { position: absolute; z-index: -1; }
+.takePic__agree .takePicAgree:checked + label { background-position: 0 bottom; }
+.takePic__agree .takePicAgree__label { background: transparent url("../images/event/popup/chkbox-pink.png") no-repeat 0 top; width: 302px; height: 47px; display: block; }
+.takePic__agree .agree { background: transparent url("../images/event/popup/takePic-label.png") no-repeat 0 bottom; display: inline-block; width: 238px; height: 20px; margin-top: 14px; margin-left: 64px; }
+.takePic__agree__detail { position: absolute; top: 14px; left: 309px; }
+.takePic__btn { background: transparent url("../images/event/popup/event-btn-add.png") no-repeat center top; width: 218px; height: 66px; margin-top: 20px; }
+
+/* 디지털 플레이 그라운드 소문내기 후기 및 인증샷 등록 */
+/* facebook */
+.userInfo { background: transparent url("../images/event/popup/userInfo-facebook-bg.png") no-repeat center top; text-align: center; top: 150px; width: 640px; height: 1388px; margin-left: -320px; }
+.userInfo__txt { margin-top: 16px; }
+.userInfo__field-top { background: transparent url("../images/event/popup/userInfo-field-top.png") no-repeat center top; width: 491px; height: 195px; margin: 29px auto 0; padding: 29px 30px 0; text-align: left; }
+.userInfo__input-wrap { margin-top: 15px; }
+.userInfo__input-wrap__label { background: transparent url("../images/event/popup/userInfo-sns-label.png") no-repeat 0 -30px; width: 62px; height: 50px; display: inline-block; vertical-align: top; }
+.userInfo__input-wrap__label--phone { background-position: 0 -100px; }
+.userInfo__input-wrap__label--agree { background-position: 0 -177px; width: 238px; height: 20px; margin-top: 14px; margin-left: 64px; }
+.userInfo__input-wrap__label--facebook { background-position: -200px -123px; width: 160px; height: 21px; display: block; }
+.userInfo__input-wrap__input-bg { background: transparent url("../images/event/popup/userInfo-input-bg.png") no-repeat 0 top; display: inline-block; width: 428px; height: 50px; margin-left: -5px; vertical-align: top; margin-top: 6px; }
+.userInfo__input-wrap__input-bg--phone { background-position: 0 -64px; }
+.userInfo__input-wrap__input-bg--facebook { background-position: 0 -166px; width: 490px; margin-top: 7px; }
+.userInfo__input-wrap__input-bg--facebook input { width: 465px; }
+.userInfo__input-wrap__input-bg--url { background-position: left bottom; width: 470px; height: 30px; padding: 20px 0 0 20px; display: block; margin-left: 0; }
+.userInfo__input-wrap__input-bg input { font-size: 17px; margin-top: 12px; margin-left: 10px; border: none; }
+.userInfo__agree-wrap { height: 47px; text-align: left; margin-left: 75px; margin-top: 10px; position: relative; }
+.userInfo__agree-chkbox { position: absolute; top: 0; left: 0; z-index: -1; }
+.userInfo__agree-chkbox:checked + label { background-position: left bottom; }
+.userInfo__agree-label { background: transparent url("../images/event/popup/chkbox.png") no-repeat center top; width: 46px; height: 47px; display: inline-block; vertical-align: top; }
+.userInfo__agree-detail { position: absolute; top: 14px; left: 309px; }
+.userInfo__field-bottom { background: transparent url("../images/event/popup/userInfo-field-bottom.png") no-repeat center top; width: 493px; height: 733px; margin: 19px auto 0; padding: 23px 30px 0; text-align: left; }
+.userInfo__sns-wrap { margin-top: 14px; }
+.userInfo__hash { margin-top: 14px; }
+.userInfo__copy-tit { margin-top: 55px; }
+.userInfo__copy-pc { margin-top: 11px; }
+.userInfo__copy-pc .http { color: #ed1c24; }
+.userInfo__copy-item { margin-top: 6px; }
+.userInfo__copy-item__txt { margin-top: 10px; }
+.userInfo__copy-mobile { background: transparent url("../images/event/popup/userInfo-pattern.png") no-repeat 0 top; margin-top: 12px; padding-top: 15px; }
+.userInfo__copy-mobile__txt { background: transparent url("../images/event/popup/userInfo-copy-mobile-txt.png") no-repeat 0 top; height: 99px; }
+.userInfo__btn { background: transparent url("../images/event/popup/event-btn-add.png") no-repeat center top; width: 218px; height: 66px; margin-top: 20px; }
+
+/* 카카오 스토리 */
+.userInfo-kakao .userInfo__input-wrap__label--kakao { width: 195px; height: 21px; background-position: -200px -46px; }
+.userInfo-kakao .userInfo__input-wrap__input-bg--kakao-url { background: transparent url("../images/event/popup/userInfo-url-bg-kakao.png") no-repeat 0 top; height: 30px; width: 450px; margin-left: 0; padding-top: 10px; padding-left: 40px; }
+.userInfo-kakao .userInfo__copy-mobile__txt { background: transparent url("../images/event/popup/userInfo-copy-mobile-kakao.png") no-repeat 0 top; }
+
+/* 인스타그림 */
+.userInfo-instargram { background: transparent url("../images/event/popup/instar-bg.png") no-repeat center top; height: 1114px; }
+.userInfo-instargram .userInfo__field-bottom { background: transparent url("../images/event/popup/instar-inner-bg-bottom.png") no-repeat center top; height: 459px; }
+.userInfo-instargram .userInfo__input-wrap__label--instargram { background-position: -200px -82px; width: 177px; height: 21px; }
+.userInfo-instargram .userInfo__copy-instargram__txt { background: transparent url("../images/event/popup/userInfo-copy-instargram-list.png") no-repeat left top; height: 104px; margin-top: 7px; }
+
+/* 블로그 카페 공유 */
+.userInfo-blog { background: transparent url("../images/event/popup/blog-bg.png") no-repeat center top; height: 919px; }
+.userInfo-blog .userInfo__field-bottom { background: transparent url("../images/event/popup/blog-inner-bg.png") no-repeat center top; height: 264px; }
+.userInfo-blog .userInfo__input-wrap__label--blog { background-position: -200px -9px; width: 191px; height: 22px; }
+
+/****************************** menu *******************************/
+.menu-content__list { *zoom: 1; }
+.menu-content__list:after { content: ''; display: table; clear: both; }
+
+.wrap-menu { padding-bottom: 0; text-align: center; }
+
+.menu-tit { display: inline-block; margin-top: 58px; }
+
+/* menu list */
+.menu-list { overflow: hidden; margin-top: 10px; }
+.menu-list__item { float: left; margin-left: 13px; margin-top: 8px; }
+.menu-list__item:first-child, .menu-list__item--dolce { margin-left: 0; }
+
+/* menu main */
+.menu-main { margin-top: 28px; overflow: hidden; }
+.menu-main__link { display: block; margin-top: 18px; }
+.menu-main__link:first-child { margin-top: 0; }
+.menu-main__link--left { float: left; }
+.menu-main__link--right { float: right; }
+
+/* menu content */
+.menu__subtit { margin-top: 28px; }
+.menu__subtit--tea { margin-top: 10px; }
+.menu__subtit--beverage { margin-top: 21px; }
+.menu__subtit--kitkat { margin-top: 18px; }
+
+.menu-content { margin-top: -2px; padding-bottom: 103px; }
+.menu-content__list { margin-top: 20px; border-bottom: 1px solid #e5e5e5; }
+.menu-content__item { float: left; }
+.menu-content--noMenu { background: transparent url("../images/menu/bg-dolce.jpg") no-repeat 0 top; padding: 44px 0 104px; text-align: left; }
+.menu-content__dolce-tit { margin-left: 525px; }
+.menu-content__dolce-txt { margin-top: 30px; margin-left: 525px; }
+
+.menu-caution { background: transparent url("../images/menu/menu-caution.png") no-repeat center top; width: 596px; height: 56px; overflow: hidden; margin-top: 20px; margin-left: 20px; text-indent: -9999em; }
+
+/***************** menu popup *************************/
+.menu-detail { background: transparent url("../images/menu/popup/bg-outer.png") no-repeat center top; display: none; position: absolute; top: 50%; left: 50%; width: 840px; height: 470px; padding: 30px 30px 0; margin-top: -250px; margin-left: -450px; z-index: 10; *zoom: 1; }
+.menu-detail:after { content: ''; display: table; clear: both; }
+.menu-detail--left { outline: 1px dashed blue; float: left; width: 350px; }
+.menu-detail__thumb { outline: 1px dashed green; margin-top: 9px; overflow: hidden; }
+.menu-detail__thumb-link { display: block; float: left; border: 1px solid #ddd; margin-left: 5px; }
+.menu-detail__thumb-link:first-child { margin-left: 0; }
+.menu-detail__thumb-link.on { border-color: #000; }
+.menu-detail--right { outline: 1px dashed red; float: right; width: 460px; }
+.menu-detail--right__tit { margin-top: 43px; margin-left: 20px; }
+.menu-detail--right__txt { background: transparent url("../images/menu/popup/disc-cake-cheese.png") no-repeat center top; height: 205px; text-indent: -9999em; overflow: hidden; margin-top: 25px; }
+.menu-detail__caution { margin-top: 20px; margin-left: 20px; }
+.menu-detail__close { background: transparent url("../images/menu/popup/close.png") no-repeat center top; width: 40px; height: 40px; position: absolute; top: -30px; right: -50px; border: none; cursor: pointer; }
+.menu-detail.on { display: block; }
+
+/* temp */
+.temp { position: fixed; z-index: 10000; top: 30px; left: 20px; background: gray; }
+.temp button { display: block; margin: 10px; }
+
+/*# sourceMappingURL=itaewon.css.map */

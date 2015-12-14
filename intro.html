@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/itaewon.css">
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+
+	<div class="intro">
+		<div class="intro-before">
+			<p><img src="./images/intro/intro_copy.png" alt="it all starts with a nescafe"></p>
+			<div class="intro__images">
+				<div class="img img0"><img src="./images/intro/intro_cup_01.png" alt=""></div>
+				<div class="img img1"><img src="./images/intro/intro_cup_02.png" alt=""></div>
+				<div class="img img2"><img src="./images/intro/intro_cup_03.png" alt=""></div>
+				<div class="img img3"><img src="./images/intro/intro_cup_04.png" alt=""></div>
+				<div class="img img4"><img src="./images/intro/intro_cup_05.png" alt=""></div>
+				<div class="img img5"><img src="./images/intro/intro_cup_06.png" alt=""></div>
+				<div class="img img6"><img src="./images/intro/intro_cup_07.png" alt=""></div>
+				<div class="img img7"><img src="./images/intro/intro_cup_08.png" alt=""></div>
+				<div class="img img8"><img src="./images/intro/intro_cup_09.png" alt=""></div>
+			</div>
+		</div>
+		<div class="intro-after">
+			<img src="./images/intro/intro_logo.png" alt="it all starts with a  nescafe">
+		</div>
+	</div>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+	<script>
+		var imgWrap = $('.intro__images');
+
+		// imgWrap.children().hide();
+		imgWrap.find('.img0').show();
+
+		function showAnimation(i){
+
+			imgWrap.children().hide();
+			imgWrap.find('.img' + i).show();
+			if(i === 8) {
+				$('.intro-before').delay(500).fadeOut(1000);
+				$('.intro-after').delay(1500).fadeIn(500);
+
+				setTimeout(function(){
+					location.href = './#3rdPage';
+				},3000);
+
+				return;
+			}
+			setTimeout(function(){ showAnimation(++i); },100);
+		}
+
+		showAnimation(0);
+
+	</script>
+</body>
+</html>
