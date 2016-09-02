@@ -364,27 +364,7 @@ bike.moveX();
 
 dayAndNight.init();
 
-$('.lnb-btn').on({
-    click: function(e) {
-        e.preventDefault();
-        var hash = this.hash;
-        goToSection(hash);
-    },
-    mouseenter: function() {
-        var hash = location.hash;
-        if (hash != '#4thpage') {
-            // console.log(hash);
-            $(this).next().stop().fadeIn();
-        }
-    },
-    mouseleave: function() {
-        var hash = location.hash;
-        if (hash != '#4thpage') {
-            // console.log(hash);
-            $(this).next().hide();
-        }
-    }
-});
+
 
 $(window).scroll(function() {
     var hash = location.hash;
@@ -422,59 +402,76 @@ function popupToggle(dim, popup, flag) {
 
     }
 }
-
-
-var sectionLink = (function() {
-    var pageSlide = null;
-    var linker = $('.linker');
-
-    function gotoSection() {
-        linker.on('click', function(e) {
-            e.preventDefault();
-            var hash = this.hash;
-            goToSection(hash);
-        });
+/*$('.lnb-btn').on({
+    click: function(e) {
+        e.preventDefault();
+        var hash = this.hash;
+        goToSection(hash);
+    },
+    mouseenter: function() {
+        var hash = location.hash;
+        if (hash != '#4thpage') {
+            // console.log(hash);
+            $(this).next().stop().fadeIn();
+        }
+    },
+    mouseleave: function() {
+        var hash = location.hash;
+        if (hash != '#4thpage') {
+            // console.log(hash);
+            $(this).next().hide();
+        }
     }
-    return {
-        gotoSection: gotoSection
-    }
-}());
+});*/
 
-// 해당 페이지로 이동
-function goToSection(hash) {
+function animationOffset(hash) {
     $('html, body').animate({
         scrollTop: $(hash).offset().top
     });
 }
 
-var site = {
+var Site = Site || {};
 
-    gotoLoc: function() {
-        var pageSlide = null;
-        var linker = $('.linker');
+Site.nav = (function() {
+    var $target = $('.lnb-btn');
+    var lHash = location.hash;
 
-        linker.on('click', function(e) {
-            e.preventDefault();
-            var hash = this.hash;
-            // console.log(hash);
-            goToSection(hash);
-        });
+    return {
+        controllNv: function() {
+            $target.on({
+                click: function(e) {
+                    e.preventDefault();
+                    var myHash = this.hash;
+                    animationOffset(myHash);
+                    // console.log(lHash);
+                },
+                mouseenter: function() {
+                    if (lHash != '#4thpage') {
+                        // console.log(hash);
+                        $(this).next().stop().fadeIn();
+                    }
+                },
+                mouseleave: function() {
+                    if (lHash != '#4thpage') {
+                        // console.log(hash);
+                        $(this).next().hide();
+                    }
+                }
+            });
+        }
     }
-};
+}());
+
+
+
+
+// 해당 페이지로 이동
+
 
 
 window.addEventListener('load', function() {
-    // 상위 섹션으로 이동
-    // sectionLink.gotoSection();
-    site.gotoLoc();
+    // 상위 버튼 클릭시 위로 이동
+    Site.nav.controllNv();
+
+    // site.gotoSection();
 }, false);
-
-// 각층 슬라이드
-
-
-/*function checkSlide() {
-    if (pageSlide !== null) {
-        pageSlide.destroySlider();
-    }
-}
-*/
