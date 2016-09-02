@@ -70,6 +70,13 @@ function changeClsName(target, rmName, addName) {
     $(target).removeClass(rmName).addClass(addName);
 }
 
+function gotoLocAni(hash) {
+    $('html, body').animate({
+        scrollTop: $(hash).offset().top
+    });
+}
+
+
 // 위치값 반응형
 function responseLoc() {
     var baseX = 1920;
@@ -358,38 +365,35 @@ var dayAndNight = {
     }
 };
 
-
-// 모션 이미지들
 var light = new Motion(lightProp);
 var handShaker = new Motion(handShakerProp);
 var woman = new Motion(womanProp);
 var hatMan = new Motion(hatManProp);
 var bike = new Motion(bikeProp);
 
-light.standMotion();
-handShaker.standMotion();
-
-woman.standMotion();
-woman.moveX();
-
-hatMan.standMotion();
-hatMan.moveX();
-
-bike.standMotion();
-bike.moveX();
-
-dayAndNight.init();
-
-function gotoLocAni(hash) {
-    $('html, body').animate({
-        scrollTop: $(hash).offset().top
-    });
-}
-
 var Site = Site || {};
 
 Site.load = function() {
     responseLoc();
+
+    // 모션 이미지들
+
+
+    light.standMotion();
+    handShaker.standMotion();
+
+    woman.standMotion();
+    woman.moveX();
+
+    hatMan.standMotion();
+    hatMan.moveX();
+
+    bike.standMotion();
+    bike.moveX();
+
+    dayAndNight.init();
+
+
     // 1초 뒤에 맨 아래로 이동
     setTimeout(function() {
         gotoLocAni('.floor1');
